@@ -3,6 +3,8 @@
 Oyunun içine çizilen bir hile penceresi (Dear ImGui + Direct3D 9 hook). Oyun dosyalarına dokunmaz.
 
 ## Kullanım
+Hazır derlenmiş hali: [Releases](https://github.com/kmertkun/undertale-utcheat/releases/latest) → `UTCheat.zip`. Kendin derlediysen:
+
 1. `bin\UTInjector.exe`'yi çalıştır (oyun kapalıysa Steam'den kendisi açar).
 2. Oyunda **INSERT** ile menüyü aç/kapat.
 

@@ -2,6 +2,15 @@
 
 Undertale (Steam, Windows) için hile araçları.
 
+## İndir
+**[Son sürüm → UTCheat.zip](https://github.com/kmertkun/undertale-utcheat/releases/latest/download/UTCheat.zip)** (derlemeye gerek yok)
+
+1. Zip'i bir klasöre aç.
+2. `UTInjector.exe`'ye çift tıkla (oyun kapalıysa Steam'den kendisi açar).
+3. Oyunda **INSERT** ile hile menüsünü aç/kapat.
+
+Windows Defender / tarayıcı "bilinmeyen uygulama" uyarısı verebilir: enjektör başka bir işleme DLL yüklediği için bu tür araçlar sık işaretlenir. İçinden emin olmak istersen kaynaktan kendin derle ([utcheat/README.md](utcheat/README.md)).
+
 | Klasör / dosya | Ne |
 |---|---|
 | [utcheat/](utcheat/) | Oyuna enjekte edilen DLL: oyun içi ImGui menüsü, ölümsüzlük, tek vuruş, auto-dodge (tüm ruh modları), test savaşı, sonlara ışınlanma, oyun hızı. Ayrıntılar ve derleme: [utcheat/README.md](utcheat/README.md) |
