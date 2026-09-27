@@ -13,6 +13,7 @@ Hazır derlenmiş hali: [Releases](https://github.com/kmertkun/undertale-utcheat
 ## Menü
 | Bölüm | Özellik |
 |---|---|
+| Silah | Sans'ın Gaster Blaster'ı ya da Undyne'ın mızrağı: oyun ekranına sol tıkla, tıkladığın yere ateş eder. Değdiği her şey 1 hasar alır: düşmanlar (oyunun kendi hasar yazısıyla; son can gidince düşman gerçekten ölür), Sans (ölüm sahnesi senin turunda başlar), savaşta kalp, haritada Frisk. Oyunun kendi Blaster'ı kullanılır, kendi kalp çarpışması kapatılır; auto-dodge bunlardan kaçmaz |
 | THE ERASURE | Kırmızı buton: istediğin an Chara'nın dünyayı silmesi (vuruş sesi, ekranı dolduran 9'lar, pencere sallanıp oyun kapanır). Oyunun o anda yaptığı kayıt silme, ruhsuz işareti ve Steam Cloud yazımı etkisizleştirilir; kayıtlar yerinde kalır |
 | Karakter | Haritada Frisk yerine Chara, Sans, Papyrus, Toriel, Undyne, Alphys, Asgore, Asriel, Monster Kid ya da Napstablook olarak gez. Çarpışma kutusu Frisk'te kalır, sprite ayaklara hizalanır |
 | Can | Ölümsüzlük (HP hep dolu + game over engeli), tek vuruş (varsayılan açık, her vuruş 999999999; Sans dahil), canı doldur, Max HP ayarla |

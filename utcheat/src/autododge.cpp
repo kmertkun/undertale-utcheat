@@ -153,6 +153,8 @@ int hits(float px, float py, float margin, int frames, bool stopAtFirst) {
     return n;
 }
 
+bool (*gIgnore)(void*) = nullptr;
+
 void collectHazards() {
     gHazards.clear();
     gSpears.clear();
@@ -163,6 +165,7 @@ void collectHazards() {
         if (!gm::readInstance(inst, vObj, obj)) return;
         int o = (int)obj;
         if (o < 0 || o >= gm::OBJECT_COUNT || !(gIsHazard[o] || gIsSpear[o])) return;
+        if (gIgnore && gIgnore(inst)) return;
         Box b;
         if (!readBox(inst, b)) return;
         double ix = 0, iy = 0;
@@ -536,6 +539,8 @@ void blueAI(void* heart, int mv, const Settings& set, Status& st) {
 }
 
 } // namespace
+
+void setIgnore(bool (*ignore)(void* inst)) { gIgnore = ignore; }
 
 void tick(const Settings& s, Status& st) {
     if (!gInit) init();

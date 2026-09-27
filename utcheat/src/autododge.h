@@ -21,6 +21,9 @@ struct Status {
     int dodges = 0;
 };
 
+// Bu fonksiyon true donduren instance'lar mermi sayilmaz (oyuncunun kendi silahlari).
+void setIgnore(bool (*ignore)(void* inst));
+
 // Her oyun karesinde ana thread'den cagrilir.
 void tick(const Settings& s, Status& st);
 

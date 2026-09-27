@@ -14,6 +14,7 @@
 #include "autododge.h"
 #include "log.h"
 #include "input.h"
+#include "weapons.h"
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND, UINT, WPARAM, LPARAM);
 
@@ -35,6 +36,7 @@ struct Cheats {
     bool pendingErasure = false;
     bool skipCredits = true;
     int character = 0;  // kCharacters indeksi, 0 = Frisk
+    int weapon = weapons::OFF;
 } g;
 
 enum { END_NEUTRAL = 1, END_PACIFIST = 2, END_GENOCIDE = 3 };
@@ -482,6 +484,11 @@ void tickGame() {
 
     dodge::tick(g.dodge, gDodge);
 
+    weapons::tick(gVarObj);
+    static bool sSansDeath = false;  // Sans'a silah isabet etti: olum sahnesini baslat
+    if (weapons::takeSansKill()) sSansDeath = true;
+    if (!st.soul) sSansDeath = false;
+
     if (g.oneHit && st.soul) {
         // Tek vurus: dusmanlarin cani 1'e cekilir; ayrica oyuncunun vurusu kaydedildigi an (hurtanim 1) canavarin
         // takedamage'i ONE_HIT_DMG yapilir, boylece cubugun kenarindan vurulan zayif bir vurus bile oldurur.
@@ -489,6 +496,7 @@ void tickGame() {
         for (int i = 0; i < 3; ++i) {
             double mhp, ha = 0, mid = -4;
             if (gm::readGlobal("monsterhp", mhp, i) && mhp > 1) gm::writeGlobal("monsterhp", 1, i);
+            if (weapons::hitInProgress(i)) continue;  // silah isabeti: 1 hasar oldugu gibi kalsin
             if (gm::readGlobal("hurtanim", ha, i) && (ha == 1 || ha == 3) && gm::readGlobal("monsterinstance", mid, i))
                 if (void* mon = gm::instanceById((int)mid)) {
                     double td = 0;
@@ -501,19 +509,34 @@ void tickGame() {
                 }
         }
         // Ekrandaki hasar sayisi (Sans'in 9999999'u dahil) de ONE_HIT_DMG gorunsun.
-        gm::forEachInstance([&](void* w) {
+        if (!weapons::anyHitInProgress() && !sSansDeath) gm::forEachInstance([&](void* w) {
             double o = -1, dmg = 0;
             if (gm::readInstance(w, gVarObj, o) && (int)o == gm::OBJ_DMGWRITER &&
                 gm::readInstanceVar(w, "dmg", dmg) && dmg > 0 && dmg != ONE_HIT_DMG)
                 gm::writeInstanceVar(w, "dmg", ONE_HIT_DMG);
         });
-        // Sans vurulamaz (her saldiriya "MISS" ile kacar). Oyuncu saldirdigi an (global.damagetimer > 0) kacisi
-        // iptal edip oyunun kendi final vurusunu (sahte FIGHT butonunun yaptigi gibi death_c = 1) baslat.
+    }
+    // Silahla vurulan Sans: hasar yazisi (oyunun 9999999'u) 1 gorunsun.
+    if (sSansDeath && st.soul)
+        gm::forEachInstance([&](void* w) {
+            double o = -1, dmg = 0;
+            if (gm::readInstance(w, gVarObj, o) && (int)o == gm::OBJ_DMGWRITER &&
+                gm::readInstanceVar(w, "dmg", dmg) && dmg > 1)
+                gm::writeInstanceVar(w, "dmg", 1);
+        });
+    if ((g.oneHit || sSansDeath) && st.soul) {
+        // Sans vurulamaz (her saldiriya "MISS" ile kacar). Oyuncu saldirdigi an (global.damagetimer > 0) ya da
+        // silahla vuruldugunda kacisi iptal edip oyunun kendi final vurusunu (sahte FIGHT butonunun yaptigi gibi
+        // death_c = 1) baslat.
         if (void* body = gm::findInstance(gm::OBJ_SANSB_BODY, gVarObj)) {
             double deathC = 0, dmgTimer = -1;
             gm::readInstanceVar(body, "death_c", deathC);
             gm::readGlobal("damagetimer", dmgTimer);
-            if (deathC == 0 && dmgTimer > 0) {
+            // Silah isabeti Sans'in saldirisi sirasinda geldiyse olum sahnesi sira oyuncuya gecince baslar (sahte
+            // FIGHT butonu da oyuncunun turunda calisir; saldiri surerken baslatilinca tur akisiyla karisiyordu).
+            double mn = -1, my = -1;
+            const bool playerTurn = gm::readGlobal("mnfight", mn) && mn == 0 && gm::readGlobal("myfight", my) && my == 0;
+            if (deathC == 0 && ((g.oneHit && dmgTimer > 0) || (sSansDeath && playerTurn))) {
                 gm::writeInstanceVar(body, "dodge", 0);
                 gm::writeInstance(body, gm::findBuiltinVar("hspeed"), 0);
                 gm::writeInstanceVar(body, "death_c", 1);
@@ -637,6 +660,15 @@ void drawMenu() {
     ImGui::EndDisabled();
     if (!st.frisk) ImGui::TextDisabled("Haritada yürürken kullanılabilir");
 
+    ImGui::SeparatorText("Silah (tıkladığın yere, 1 hasar)");
+    ImGui::RadioButton("Kapalı", &g.weapon, weapons::OFF);
+    ImGui::SameLine();
+    ImGui::RadioButton("Gaster Blaster", &g.weapon, weapons::BLASTER);
+    ImGui::SameLine();
+    ImGui::RadioButton("Undyne mızrağı", &g.weapon, weapons::SPEAR);
+    if (g.weapon != weapons::OFF)
+        ImGui::TextDisabled("Oyun ekranına sol tıkla. Değdiği her şey 1 hasar alır\n(düşmanlar, savaşta kalp, haritada Frisk).");
+
     ImGui::BeginDisabled(!gFileHooksOk || !st.hasHp || gErasureFired);
     ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.55f, 0.05f, 0.05f, 1));
     ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.8f, 0.1f, 0.1f, 1));
@@ -703,9 +735,27 @@ void drawMenu() {
 }
 
 // ---------------------------------------------------------------- pencere mesajlari
+// Pencere istemci koordinati -> oyunun 640x480 goruntusu (tam ekranda en-boy korunup ortalanir).
+bool clientToPort(HWND hWnd, LPARAM lParam, float& px, float& py) {
+    RECT rc; GetClientRect(hWnd, &rc);
+    const int cw = rc.right - rc.left, ch = rc.bottom - rc.top;
+    if (cw <= 0 || ch <= 0 || !gBbW || !gBbH) return false;
+    const float bx = (short)LOWORD(lParam) * (float)gBbW / cw, by = (short)HIWORD(lParam) * (float)gBbH / ch;
+    const float sc = std::fmin(gBbW / 640.0f, gBbH / 480.0f);
+    px = (bx - (gBbW - 640 * sc) * 0.5f) / sc;
+    py = (by - (gBbH - 480 * sc) * 0.5f) / sc;
+    return px >= 0 && px < 640 && py >= 0 && py < 480;
+}
+
 LRESULT CALLBACK hkWndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     if (msg == WM_KEYDOWN && wParam == VK_INSERT && !(lParam & (1 << 30))) {
         g.menuOpen = !g.menuOpen;
+        return 0;
+    }
+    if (msg == WM_LBUTTONDOWN && g.weapon != weapons::OFF &&
+        !(gImguiReady && g.menuOpen && ImGui::GetIO().WantCaptureMouse)) {
+        float px, py;
+        if (clientToPort(hWnd, lParam, px, py)) weapons::queueShot(g.weapon, px, py);
         return 0;
     }
     if (gImguiReady && g.menuOpen) {
@@ -766,6 +816,7 @@ void initImgui(IDirect3DDevice9* dev) {
     ImGui_ImplDX9_Init(dev);
     gOrigWndProc = (WNDPROC)SetWindowLongPtrW(gWnd, GWLP_WNDPROC, (LONG_PTR)hkWndProc);
     vinput::setWindow(gWnd);
+    dodge::setIgnore(weapons::isOurs);
     gImguiReady = true;
 }
 

@@ -74,6 +74,15 @@ constexpr int OBJ_BLACK_ENDER    = 522;  // delay (kare sayaci), depth -40000 (h
 constexpr uintptr_t ADDR_SPRITE_DUPLICATE  = 0x00518090;  // sprite_duplicate(ind) -> yeni sprite
 constexpr uintptr_t ADDR_SPRITE_SET_OFFSET = 0x0051C4C0;  // sprite_set_offset(ind, xoff, yoff)
 constexpr int SPR_MAINCHARAD = 1131;  // Frisk asagi (20x30, orijin 0,0); carpisma maskesi olarak da kullanilir
+// Silahlar (Sans'in Gaster Blaster'i, Undyne'in mizragi)
+constexpr int OBJ_GASTERBLASTER = 499;
+constexpr int OBJ_NPC_MARKER    = 1365;  // olaysiz, sadece sprite cizen obje (scr_marker)
+constexpr int OBJ_SHAKER        = 185;
+constexpr int OBJ_WRITER        = 784;   // metin kutusu yazicisi (savastaki aciklama metni dahil)
+constexpr int SPR_FOLLOWSPEAR   = 320;   // Undyne mizragi, 60x60, orijin ortada, 0 derecede saga bakar
+constexpr int SND_SEGAPOWER     = 179;   // Blaster sarj sesi
+constexpr int SND_ARROW         = 20;    // mizrak firlatma
+constexpr int SND_HURT1         = 53;    // oyuncu hasar sesi
 // Built-in "room" degiskeninin getter'i (0x401BB0) bu int'i okur.
 inline int currentRoom() { return *(volatile int*)0x00A18EA0; }
 
@@ -156,6 +165,22 @@ inline void forEachInstance(F&& fn) {
 }
 
 // Instance id'sinden (orn. global.monsterinstance[i]) CInstance* (yoksa nullptr).
+// Motor fonksiyonunu cagirir (self: instance_destroy gibi self kullananlar icin), sonucu sayi olarak dondurur.
+inline double call(uintptr_t addr, int argc, RValue* args, void* self = nullptr) {
+    RValue result{};
+    ((Routine)addr)(&result, self, self, argc, args);
+    double v = -1;
+    toDouble(result, v);
+    return v;
+}
+
+// Dizi olan built-in degiskenler (view_xview[0], alarm[i] ...).
+inline bool readInstanceArr(void* inst, int varId, int index, double& out) {
+    RValue v{}; v.kind = 5;
+    getInstanceVar(inst, varId, index, &v);
+    return toDouble(v, out);
+}
+
 inline void* instanceById(int id) {
     uint8_t* buckets = *pInstBuckets;
     if (!buckets || id < 0) return nullptr;

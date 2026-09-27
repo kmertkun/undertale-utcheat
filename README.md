@@ -16,6 +16,7 @@ Windows Defender / tarayıcı "bilinmeyen uygulama" uyarısı verebilir: enjekt�
 | | |
 |---|---|
 | **THE ERASURE** | Kırmızı buton: istediğin an Chara gibi dünyayı sil. Vuruş sesi, ekranı dolduran kırmızı 9'lar, pencere sallanır, oyun kapanır. Kayıtların silinmez, Steam Cloud'a bir şey yazılmaz |
+| **Gaster Blaster / Undyne mızrağı** | Sans'ın Blaster'ını ya da Undyne'ın mızrağını çal: ekranda istediğin yere tıkla, oraya ateş etsin. Değdiği her şey 1 hasar alır: düşmanlar, Sans, savaşta kalp, haritada Frisk |
 | **Karakter** | Haritada Frisk yerine Chara, Sans, Papyrus, Toriel, Undyne, Alphys, Asgore, Asriel, Monster Kid ya da Napstablook olarak gez |
 | **Tek vuruş** | Varsayılan açık. Her vuruş 999999999 hasar, Sans dahil (MISS yok) |
 | **Auto-dodge** | Kalp mermilerden kendi kaçar. Kırmızı, mavi, yeşil ve mor ruhun hepsinde çalışır. Rage (ışınlanarak no-hit) ya da Legit (yürüyerek) |
@@ -45,6 +46,7 @@ Ama:
 - Üç sonu görmek için oyunu üç kez baştan oynamak yerine bir butona basmak istedim.
 - Asıl eğlencesi hilenin kendisi değil, yapımıydı: GameMaker'ın içini kurcalamak, mermileri okuyup kalbi kendi kendine kaçıran bir auto-dodge yazmak, Sans'ın "MISS"ini atlatmanın yolunu bulmak.
 - Hep Frisk'le oynamaktan sıkıldım. Artık Sans olarak gezebiliyorum.
+- Sans'ın Gaster Blaster'ını çaldım. Artık kendisine karşı kullanıyorum.
 - Tek oyunculu bir oyun. Kimseye zararı yok; olsa olsa Flowey'ye.
 
 The Erasure'da dünya yine silinip oyun kapanıyor, ama oyunun o anda kayıtları silip Steam Cloud'a kalıcı "ruhsuz" işareti bıraktığı kısım etkisiz. Yani bu hile oyunun kendisinden daha merhametli.
