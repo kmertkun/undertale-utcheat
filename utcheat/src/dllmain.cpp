@@ -568,7 +568,7 @@ void initImgui(IDirect3DDevice9* dev) {
         io.Fonts->AddFontDefault();
     // Enjeksiyon acilis yazisi icin buyuk kalin font (yoksa varsayilan font buyutulerek cizilir).
     GetWindowsDirectoryA(fontPath, MAX_PATH);
-    strcat_s(fontPath, "\Fonts\segoeuib.ttf");
+    strcat_s(fontPath, "\\Fonts\\segoeuib.ttf");
     if (GetFileAttributesA(fontPath) != INVALID_FILE_ATTRIBUTES)
         gSplashFont = io.Fonts->AddFontFromFileTTF(fontPath, 44.0f, nullptr, ranges);
 

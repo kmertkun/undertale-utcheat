@@ -1,7 +1,8 @@
-// UTInjector - utcheat.dll'i UNDERTALE.exe'ye yukler. Oyun kapaliysa Steam uzerinden baslatir.
+// UTInjector - utcheat.dll'i UNDERTALE.exe'ye yukler. Cift tikla, gerisini o halleder:
+// oyun kapaliysa Steam uzerinden baslatir, penceresini bekler, DLL'i yukler. Konsol penceresi acmaz; basarida
+// oyunda acilis yazisi cikar, sadece hata olursa mesaj kutusu gosterir.
 #include <windows.h>
 #include <tlhelp32.h>
-#include <cstdio>
 #include <cwchar>
 
 static DWORD findProcess(const wchar_t* name) {
@@ -41,30 +42,27 @@ static bool hasWindow(DWORD pid) {
 }
 
 static int fail(const wchar_t* msg) {
-    fwprintf(stderr, L"HATA: %ls (kod %lu)\n", msg, GetLastError());
     MessageBoxW(nullptr, msg, L"UTInjector", MB_ICONERROR);
     return 1;
 }
 
-int wmain() {
+int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR, int) {
     wchar_t dll[MAX_PATH];
     GetModuleFileNameW(nullptr, dll, MAX_PATH);
     wcscpy(wcsrchr(dll, L'\\') + 1, L"utcheat.dll");
-    if (GetFileAttributesW(dll) == INVALID_FILE_ATTRIBUTES) return fail(L"utcheat.dll, UTInjector.exe ile aynı klasörde bulunamadı.");
+    if (GetFileAttributesW(dll) == INVALID_FILE_ATTRIBUTES) return fail(L"utcheat.dll, UTInjector.exe ile aynı klasörde olmalı.");
 
     DWORD pid = findProcess(L"UNDERTALE.exe");
     if (!pid) {
-        wprintf(L"Undertale kapalı, Steam üzerinden başlatılıyor...\n");
         ShellExecuteW(nullptr, L"open", L"steam://rungameid/391540", nullptr, nullptr, SW_SHOWNORMAL);
         for (int i = 0; i < 120 && !pid; ++i) { Sleep(500); pid = findProcess(L"UNDERTALE.exe"); }
-        if (!pid) return fail(L"Undertale 60 saniye içinde açılmadı.");
+        if (!pid) return fail(L"Undertale 60 saniye içinde açılmadı. Oyunu kendin açıp tekrar dene.");
     }
     for (int i = 0; i < 60 && !hasWindow(pid); ++i) Sleep(500);
     Sleep(1500);  // D3D cihazinin olusmasi icin kisa bekleme
 
     if (hasModule(pid, L"utcheat.dll")) {
-        wprintf(L"Hile menüsü zaten yüklü. Oyunda INSERT'e bas.\n");
-        Sleep(2000);
+        MessageBoxW(nullptr, L"Hile zaten yüklü. Oyunda INSERT ile menüyü aç/kapat.", L"UTInjector", MB_ICONINFORMATION);
         return 0;
     }
 
@@ -86,9 +84,6 @@ int wmain() {
     CloseHandle(th);
     VirtualFreeEx(proc, remote, 0, MEM_RELEASE);
     CloseHandle(proc);
-    if (!exitCode) return fail(L"LoadLibrary başarısız oldu (DLL yüklenemedi).");
-
-    wprintf(L"Yüklendi! Oyunda INSERT ile hile menüsünü aç/kapat.\n");
-    Sleep(2000);
-    return 0;
+    if (!exitCode) return fail(L"DLL yüklenemedi (LoadLibrary başarısız).");
+    return 0;  // basarili: oyunda acilis yazisi cikar
 }

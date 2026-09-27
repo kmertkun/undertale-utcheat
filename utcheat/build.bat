@@ -32,6 +32,6 @@ echo [2/3] utcheat.dll
     -o bin\utcheat.dll || exit /b 1
 
 echo [3/3] UTInjector.exe
-%CXX% -O2 -std=c++17 -static -municode src\injector.cpp -luser32 -lshell32 -o bin\UTInjector.exe || exit /b 1
+%CXX% -O2 -std=c++17 -static -municode -mwindows src\injector.cpp -luser32 -lshell32 -o bin\UTInjector.exe || exit /b 1
 
 echo Tamam: bin\utcheat.dll, bin\UTInjector.exe
