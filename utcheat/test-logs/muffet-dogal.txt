@@ -1,0 +1,37 @@
+[19:29:10.133] UTCheat yuklendi, kancalar kuruldu
+[19:29:27.566] HARITA: Frisk (210,99)
+[19:29:32.704] Auto-dodge: ACIK (pay=5, tahmin=3)
+[19:29:38.553] Test savasi baslatildi: battlegroup=56
+[19:29:39.649] SAVAS BASLADI: battlegroup=56, HP 20
+[19:29:51.184] TUR 1: dusman saldiriyor (HP 20)
+[19:29:51.184]   auto-dodge aktif (kirmizi ruh), alan x[202..420] y[255..368]
+[19:29:55.253]   auto-dodge aktif (mor ruh), alan x[217..417] y[280..360]
+[19:30:00.934] TUR 1 BITTI: kacis=0, hasar alinan vurus=0 (-0 HP), en fazla mermi=0
+[19:30:10.684] TUR 2: dusman saldiriyor (HP 20)
+[19:30:10.684]   auto-dodge aktif (mor ruh), alan x[217..417] y[280..360]
+[19:30:13.712]   KACIS f1209 [mor]: (317,320)->(317,280) hedef=(317,280) yol=1 adim mermi=4
+[19:30:15.059]   KACIS f1249 [mor]: (317,280)->(317,320) hedef=(317,320) yol=1 adim mermi=3
+[19:30:15.768] TUR 2 BITTI: kacis=2, hasar alinan vurus=0 (-0 HP), en fazla mermi=4
+[19:30:25.351] TUR 3: dusman saldiriyor (HP 20)
+[19:30:25.351]   auto-dodge aktif (mor ruh), alan x[217..417] y[280..360]
+[19:30:26.330]   KACIS f1582 [mor]: (317,320)->(317,280) hedef=(317,280) yol=1 adim mermi=2
+[19:30:27.135]   KACIS f1606 [mor]: (317,280)->(317,320) hedef=(317,320) yol=1 adim mermi=4
+[19:30:27.413]   KACIS f1614 [mor]: (317,320)->(317,360) hedef=(317,360) yol=1 adim mermi=5
+[19:30:29.038]   KACIS f1662 [mor]: (317,360)->(317,320) hedef=(317,280) yol=2 adim mermi=5
+[19:30:29.087]   KACIS f1663 [mor]: (317,320)->(317,280) hedef=(317,280) yol=1 adim mermi=5
+[19:30:30.399]   KACIS f1702 [mor]: (317,280)->(317,320) hedef=(317,320) yol=1 adim mermi=4
+[19:30:30.677]   KACIS f1710 [mor]: (317,320)->(317,360) hedef=(317,360) yol=1 adim mermi=4
+[19:30:31.469] TUR 3 BITTI: kacis=7, hasar alinan vurus=0 (-0 HP), en fazla mermi=6
+[19:30:39.989] TUR 4: dusman saldiriyor (HP 20)
+[19:30:39.989]   auto-dodge aktif (mor ruh), alan x[217..417] y[280..360]
+[19:30:40.857]   KACIS f2011 [mor]: (317,320)->(317,280) hedef=(317,280) yol=1 adim mermi=3
+[19:30:41.261]   KACIS f2023 [mor]: (317,280)->(323,280) hedef=(331,320) yol=8 adim mermi=5
+[19:30:41.309]   KACIS f2024 [mor]: (323,280)->(323,320) hedef=(323,320) yol=1 adim mermi=5
+[19:30:41.788]   KACIS f2038 [mor]: (323,320)->(323,360) hedef=(323,360) yol=1 adim mermi=6
+[19:30:42.191]   KACIS f2050 [mor]: (323,360)->(321,360) hedef=(321,360) yol=1 adim mermi=4
+[19:30:42.218]   KACIS f2051 [mor]: (321,360)->(321,320) hedef=(331,320) yol=6 adim mermi=5
+[19:30:42.788]   KACIS f2068 [mor]: (321,320)->(321,280) hedef=(321,280) yol=1 adim mermi=6
+[19:30:43.336]   KACIS f2084 [mor]: (321,280)->(321,320) hedef=(321,320) yol=1 adim mermi=5
+[19:30:43.844]   KACIS f2099 [mor]: (321,320)->(321,280) hedef=(321,280) yol=1 adim mermi=6
+[19:30:44.393]   KACIS f2115 [mor]: (321,280)->(321,320) hedef=(321,320) yol=1 adim mermi=5
+[19:30:46.101] TUR 4 BITTI: kacis=10, hasar alinan vurus=0 (-0 HP), en fazla mermi=6

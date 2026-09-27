@@ -1,0 +1,39 @@
+[19:31:04.374] UTCheat yuklendi, kancalar kuruldu
+[19:31:21.760] HARITA: Frisk (210,99)
+[19:31:26.864] Auto-dodge: ACIK (pay=5, tahmin=3)
+[19:31:32.669] Test savasi baslatildi: battlegroup=47
+[19:31:33.752] SAVAS BASLADI: battlegroup=47, HP 20
+[19:31:52.572] TUR 1: dusman saldiriyor (HP 20)
+[19:31:52.573]   auto-block aktif (yesil ruh), kalkan=(320,240)
+[19:31:52.739]   KALKAN f763: ust -> sol (mizrak obj266 uzaklik=402)
+[19:31:52.774]   KALKAN f764: sol -> ust (mizrak obj266 uzaklik=298)
+[19:31:56.093] TUR 1 BITTI: kacis=2, hasar alinan vurus=0 (-0 HP), en fazla mermi=0
+[19:32:04.760] TUR 2: dusman saldiriyor (HP 20)
+[19:32:04.760]   auto-block aktif (yesil ruh), kalkan=(320,240)
+[19:32:04.934]   KALKAN f1122: ust -> sol (mizrak obj266 uzaklik=402)
+[19:32:04.975]   KALKAN f1123: sol -> ust (mizrak obj266 uzaklik=297)
+[19:32:07.253]   KALKAN f1190: ust -> sol (mizrak obj266 uzaklik=106)
+[19:32:08.260]   KALKAN f1220: sol -> sag (mizrak obj266 uzaklik=104)
+[19:32:09.294] TUR 2 BITTI: kacis=4, hasar alinan vurus=0 (-0 HP), en fazla mermi=0
+[19:32:19.399] TUR 3: dusman saldiriyor (HP 20)
+[19:32:19.399]   auto-block aktif (yesil ruh), kalkan=(320,240)
+[19:32:19.565]   KALKAN f1553: ust -> sol (mizrak obj266 uzaklik=402)
+[19:32:21.051]   KALKAN f1597: sol -> sag (mizrak obj266 uzaklik=113)
+[19:32:21.530]   KALKAN f1611: sag -> sol (mizrak obj266 uzaklik=115)
+[19:32:22.010]   KALKAN f1625: sol -> sag (mizrak obj266 uzaklik=113)
+[19:32:22.954]   KALKAN f1653: sag -> sol (mizrak obj266 uzaklik=115)
+[19:32:23.912]   KALKAN f1681: sol -> alt (mizrak obj266 uzaklik=112)
+[19:32:24.426] TUR 3 BITTI: kacis=6, hasar alinan vurus=0 (-0 HP), en fazla mermi=0
+[19:32:34.009] TUR 4: dusman saldiriyor (HP 20)
+[19:32:34.009]   auto-block aktif (yesil ruh), kalkan=(320,240)
+[19:32:34.176]   KALKAN f1982: ust -> sol (mizrak obj266 uzaklik=402)
+[19:32:34.211]   KALKAN f1983: sol -> ust (mizrak obj266 uzaklik=294)
+[19:32:35.294]   KALKAN f2015: ust -> sag (mizrak obj266 uzaklik=131)
+[19:32:35.725]   KALKAN f2028: sag -> alt (mizrak obj266 uzaklik=130)
+[19:32:36.155]   KALKAN f2041: alt -> sol (mizrak obj266 uzaklik=133)
+[19:32:36.607]   KALKAN f2054: sol -> ust (mizrak obj266 uzaklik=134)
+[19:32:37.037]   KALKAN f2067: ust -> sag (mizrak obj266 uzaklik=131)
+[19:32:37.474]   KALKAN f2080: sag -> alt (mizrak obj266 uzaklik=130)
+[19:32:37.926]   KALKAN f2093: alt -> sol (mizrak obj266 uzaklik=133)
+[19:32:38.371]   KALKAN f2106: sol -> ust (mizrak obj266 uzaklik=134)
+[19:32:39.454] TUR 4 BITTI: kacis=10, hasar alinan vurus=0 (-0 HP), en fazla mermi=0

@@ -1,0 +1,12 @@
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+.ignore
+
+# Oyun verisi (telifli) ve buyuk araclar - repoya girmez
+data.win*
+/UTMT_CLI/
+/utcheat/toolchain/
+/utcheat/build/
+/utcheat/bin/
+*.log
+/utcheat/test-log.txt

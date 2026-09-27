@@ -1,0 +1,570 @@
+[19:26:35.267] UTCheat yuklendi, kancalar kuruldu
+[19:26:52.713] HARITA: Frisk (210,99)
+[19:26:57.817] Auto-dodge: ACIK (pay=5, tahmin=3)
+[19:27:03.671] Test savasi baslatildi: battlegroup=95
+[19:27:04.789] SAVAS BASLADI: battlegroup=95, HP 20
+[19:27:09.108] TUR 1: dusman saldiriyor (HP 20)
+[19:27:09.108]   auto-dodge aktif (kirmizi ruh), alan x[245..383] y[230..368]
+[19:27:09.345]   auto-dodge aktif (mavi ruh), alan x[245..383] y[230..368]
+[19:27:09.867]   KACIS f353 [mavi]: (315,369)->(309,362) hedef=(251,302) yol=33 adim mermi=41
+[19:27:09.901]   KACIS f354 [mavi]: (309,362)->(303,356) hedef=(251,302) yol=30 adim mermi=41
+[19:27:09.929]   KACIS f355 [mavi]: (303,356)->(297,350) hedef=(251,302) yol=27 adim mermi=41
+[19:27:09.964]   KACIS f356 [mavi]: (297,350)->(291,344) hedef=(251,302) yol=24 adim mermi=41
+[19:27:09.991]   KACIS f357 [mavi]: (291,344)->(285,338) hedef=(251,302) yol=21 adim mermi=41
+[19:27:10.026]   KACIS f358 [mavi]: (285,338)->(279,332) hedef=(251,302) yol=18 adim mermi=41
+[19:27:10.060]   KACIS f359 [mavi]: (279,332)->(273,326) hedef=(251,302) yol=15 adim mermi=41
+[19:27:10.102]   KACIS f360 [mavi]: (273,326)->(267,320) hedef=(251,302) yol=12 adim mermi=41
+[19:27:10.130]   HASAR -1 (HP 20->19) kalp=(267,320) kutusu=[267,320 - 283,336], mermi=41
+[19:27:10.130]     obj503 kutu=[248,330 - 397,382] hiz=(0.0,0.0) uzaklik=0.0
+[19:27:10.130]     obj500 kutu=[-50,300 - -43,379] hiz=(12.0,0.0) uzaklik=310.0
+[19:27:10.130]     obj500 kutu=[-50,236 - -43,250] hiz=(12.0,0.0) uzaklik=317.8
+[19:27:10.130]   KACIS f361 [mavi]: (267,320)->(261,314) hedef=(251,302) yol=9 adim mermi=41
+[19:27:10.165]   KACIS f362 [mavi]: (261,314)->(255,308) hedef=(251,302) yol=6 adim mermi=41
+[19:27:10.303]   KACIS f366 [mavi]: (255,310)->(249,304) hedef=(251,302) yol=4 adim mermi=41
+[19:27:10.505]   auto-dodge aktif (kirmizi ruh), alan x[245..383] y[230..368]
+[19:27:10.505]   KACIS f372 [kirmizi]: (249,311)->(255,304) hedef=(257,302) yol=4 adim mermi=41
+[19:27:10.665]   KACIS f377 [kirmizi]: (255,304)->(261,298) hedef=(263,296) yol=4 adim mermi=41
+[19:27:10.706]   KACIS f378 [kirmizi]: (261,298)->(261,292) hedef=(281,272) yol=13 adim mermi=41
+[19:27:10.734]   KACIS f379 [kirmizi]: (261,292)->(255,286) hedef=(251,278) yol=7 adim mermi=41
+[19:27:10.769]   KACIS f380 [kirmizi]: (255,286)->(249,280) hedef=(251,278) yol=4 adim mermi=41
+[19:27:10.796]   KACIS f381 [kirmizi]: (249,280)->(251,278) hedef=(251,278) yol=1 adim mermi=41
+[19:27:10.866]   KACIS f383 [kirmizi]: (251,278)->(257,272) hedef=(263,274) yol=6 adim mermi=41
+[19:27:10.908]   KACIS f384 [kirmizi]: (257,272)->(263,266) hedef=(275,274) yol=9 adim mermi=41
+[19:27:10.943]   KACIS f385 [kirmizi]: (263,266)->(269,260) hedef=(287,274) yol=12 adim mermi=41
+[19:27:10.970]   KACIS f386 [kirmizi]: (269,260)->(275,254) hedef=(299,274) yol=15 adim mermi=41
+[19:27:10.998]   KACIS f387 [kirmizi]: (275,254)->(281,252) hedef=(311,274) yol=18 adim mermi=41
+[19:27:11.033]   KACIS f388 [kirmizi]: (281,252)->(275,258) hedef=(251,284) yol=16 adim mermi=41
+[19:27:11.081]   KACIS f389 [kirmizi]: (275,258)->(269,264) hedef=(251,284) yol=13 adim mermi=41
+[19:27:11.108]   HASAR -1 (HP 19->18) kalp=(269,264) kutusu=[269,264 - 285,280], mermi=41
+[19:27:11.108]     temas yok: KR (karma) zehri ya da listede olmayan bir mermi
+[19:27:11.109]     obj500 kutu=[274,236 - 281,259] hiz=(12.0,0.0) uzaklik=4.8
+[19:27:11.109]     obj500 kutu=[250,236 - 257,267] hiz=(12.0,0.0) uzaklik=12.0
+[19:27:11.109]     obj500 kutu=[298,236 - 305,250] hiz=(12.0,0.0) uzaklik=19.1
+[19:27:11.109]   KACIS f390 [kirmizi]: (269,264)->(269,270) hedef=(255,284) yol=10 adim mermi=41
+[19:27:11.136]   KACIS f391 [kirmizi]: (269,270)->(263,276) hedef=(255,284) yol=7 adim mermi=41
+[19:27:11.172]   KACIS f392 [kirmizi]: (263,276)->(257,282) hedef=(255,284) yol=4 adim mermi=41
+[19:27:11.206]   KACIS f393 [kirmizi]: (257,282)->(255,284) hedef=(255,284) yol=1 adim mermi=41
+[19:27:11.282]   KACIS f395 [kirmizi]: (255,284)->(261,282) hedef=(263,284) yol=4 adim mermi=41
+[19:27:11.310]   KACIS f396 [kirmizi]: (261,282)->(267,280) hedef=(275,284) yol=7 adim mermi=41
+[19:27:11.345]   KACIS f397 [kirmizi]: (267,280)->(273,280) hedef=(287,284) yol=10 adim mermi=41
+[19:27:11.373]   KACIS f398 [kirmizi]: (273,280)->(279,280) hedef=(299,284) yol=13 adim mermi=41
+[19:27:11.407]   KACIS f399 [kirmizi]: (279,280)->(285,280) hedef=(311,284) yol=16 adim mermi=41
+[19:27:11.450]   KACIS f400 [kirmizi]: (285,280)->(291,280) hedef=(323,284) yol=19 adim mermi=41
+[19:27:11.484]   KACIS f401 [kirmizi]: (291,280)->(297,280) hedef=(335,284) yol=22 adim mermi=40
+[19:27:11.511]   KACIS f402 [kirmizi]: (297,280)->(303,278) hedef=(347,284) yol=25 adim mermi=40
+[19:27:11.547]   KACIS f403 [kirmizi]: (303,278)->(309,278) hedef=(359,284) yol=28 adim mermi=40
+[19:27:11.574]   KACIS f404 [kirmizi]: (309,278)->(315,278) hedef=(371,284) yol=31 adim mermi=40
+[19:27:11.609]   KACIS f405 [kirmizi]: (315,278)->(321,278) hedef=(383,284) yol=34 adim mermi=40
+[19:27:11.651]   KACIS f406 [kirmizi]: (321,278)->(315,272) hedef=(253,250) yol=34 adim mermi=40
+[19:27:11.686]   KACIS f407 [kirmizi]: (315,272)->(309,266) hedef=(265,250) yol=25 adim mermi=40
+[19:27:11.714]   KACIS f408 [kirmizi]: (309,266)->(303,260) hedef=(277,250) yol=16 adim mermi=40
+[19:27:11.748]   KACIS f409 [kirmizi]: (303,260)->(297,256) hedef=(289,250) yol=7 adim mermi=40
+[19:27:11.776]   KACIS f410 [kirmizi]: (297,256)->(291,250) hedef=(291,250) yol=3 adim mermi=40
+[19:27:12.053]   KACIS f418 [kirmizi]: (291,250)->(297,246) hedef=(299,248) yol=4 adim mermi=40
+[19:27:12.102]   KACIS f419 [kirmizi]: (297,246)->(303,240) hedef=(311,248) yol=7 adim mermi=38
+[19:27:12.130]   HASAR -1 (HP 18->17) kalp=(303,240) kutusu=[303,240 - 319,256], mermi=38
+[19:27:12.130]     temas yok: KR (karma) zehri ya da listede olmayan bir mermi
+[19:27:12.130]     obj500 kutu=[298,223 - 305,236] hiz=(12.0,0.0) uzaklik=4.0
+[19:27:12.130]     obj500 kutu=[322,222 - 329,236] hiz=(12.0,0.0) uzaklik=5.0
+[19:27:12.130]     obj500 kutu=[322,272 - 329,379] hiz=(12.0,0.0) uzaklik=16.3
+[19:27:12.130]   KACIS f420 [kirmizi]: (303,240)->(309,238) hedef=(323,248) yol=10 adim mermi=38
+[19:27:12.157]   KACIS f421 [kirmizi]: (309,238)->(315,238) hedef=(335,248) yol=13 adim mermi=36
+[19:27:12.193]   KACIS f422 [kirmizi]: (315,238)->(321,238) hedef=(347,248) yol=16 adim mermi=36
+[19:27:12.234]   KACIS f423 [kirmizi]: (321,238)->(315,238) hedef=(289,258) yol=16 adim mermi=34
+[19:27:12.269]   KACIS f424 [kirmizi]: (315,238)->(309,244) hedef=(295,258) yol=10 adim mermi=34
+[19:27:12.296]   KACIS f425 [kirmizi]: (309,244)->(303,244) hedef=(283,264) yol=13 adim mermi=33
+[19:27:12.331]   KACIS f426 [kirmizi]: (303,244)->(297,250) hedef=(283,264) yol=10 adim mermi=34
+[19:27:12.359]   KACIS f427 [kirmizi]: (297,250)->(291,256) hedef=(283,264) yol=7 adim mermi=34
+[19:27:12.394]   KACIS f428 [kirmizi]: (291,256)->(285,262) hedef=(283,264) yol=4 adim mermi=34
+[19:27:12.561]   KACIS f433 [kirmizi]: (285,262)->(283,268) hedef=(299,284) yol=11 adim mermi=28
+[19:27:12.595]   KACIS f434 [kirmizi]: (283,268)->(289,274) hedef=(299,284) yol=8 adim mermi=28
+[19:27:12.636]   KACIS f435 [kirmizi]: (289,274)->(295,280) hedef=(299,284) yol=5 adim mermi=26
+[19:27:13.136]   HASAR -1 (HP 17->16) kalp=(295,280) kutusu=[295,280 - 311,296], mermi=13
+[19:27:13.136]     obj499 kutu=[378,364 - 519,506] hiz=(0.0,0.0) uzaklik=0.0
+[19:27:13.136]     obj499 kutu=[44,201 - 158,287] hiz=(0.0,0.0) uzaklik=8.5
+[19:27:13.136]     obj499 kutu=[218,19 - 304,133] hiz=(0.0,0.0) uzaklik=8.5
+[19:27:13.338]   KACIS f456 [kirmizi]: (295,280)->(301,274) hedef=(327,248) yol=16 adim mermi=6
+[19:27:13.372]   KACIS f457 [kirmizi]: (301,274)->(295,268) hedef=(311,232) yol=21 adim mermi=4
+[19:27:13.414]   KACIS f458 [kirmizi]: (295,268)->(289,262) hedef=(311,232) yol=18 adim mermi=4
+[19:27:13.449]   KACIS f459 [kirmizi]: (289,262)->(287,256) hedef=(311,232) yol=15 adim mermi=4
+[19:27:13.477]   KACIS f460 [kirmizi]: (287,256)->(293,250) hedef=(311,232) yol=12 adim mermi=4
+[19:27:13.512]   KACIS f461 [kirmizi]: (293,250)->(299,244) hedef=(311,232) yol=9 adim mermi=4
+[19:27:13.539]   KACIS f462 [kirmizi]: (299,244)->(305,238) hedef=(311,232) yol=6 adim mermi=4
+[19:27:13.574]   KACIS f463 [kirmizi]: (305,238)->(311,232) hedef=(311,232) yol=3 adim mermi=4
+[19:27:14.158]   HASAR -1 (HP 16->15) kalp=(311,232) kutusu=[311,232 - 327,248], mermi=4
+[19:27:14.158]     obj499 kutu=[134,201 - 248,287] hiz=(0.0,0.0) uzaklik=0.0
+[19:27:14.158]     obj499 kutu=[218,109 - 304,223] hiz=(0.0,0.0) uzaklik=24.5
+[19:27:14.158]     obj499 kutu=[336,387 - 422,501] hiz=(0.0,0.0) uzaklik=26.5
+[19:27:14.255]   KACIS f483 [kirmizi]: (311,232)->(305,238) hedef=(299,284) yol=26 adim mermi=4
+[19:27:14.296]   KACIS f484 [kirmizi]: (305,238)->(299,244) hedef=(299,284) yol=23 adim mermi=4
+[19:27:14.331]   KACIS f485 [kirmizi]: (299,244)->(293,250) hedef=(299,284) yol=20 adim mermi=4
+[19:27:14.359]   KACIS f486 [kirmizi]: (293,250)->(287,256) hedef=(299,284) yol=17 adim mermi=4
+[19:27:14.393]   KACIS f487 [kirmizi]: (287,256)->(281,262) hedef=(299,284) yol=14 adim mermi=4
+[19:27:14.422]   KACIS f488 [kirmizi]: (281,262)->(283,268) hedef=(299,284) yol=11 adim mermi=4
+[19:27:14.456]   KACIS f489 [kirmizi]: (283,268)->(289,274) hedef=(299,284) yol=8 adim mermi=4
+[19:27:14.498]   KACIS f490 [kirmizi]: (289,274)->(295,280) hedef=(299,284) yol=5 adim mermi=4
+[19:27:15.171]   HASAR -1 (HP 15->14) kalp=(295,280) kutusu=[295,280 - 311,296], mermi=2
+[19:27:15.171]     obj499 kutu=[56,239 - 227,368] hiz=(0.0,0.0) uzaklik=0.0
+[19:27:15.171]     obj499 kutu=[413,242 - 584,371] hiz=(0.0,0.0) uzaklik=0.0
+[19:27:15.172]   KACIS f510 [kirmizi]: (295,280)->(289,274) hedef=(251,236) yol=22 adim mermi=2
+[19:27:15.213]   KACIS f511 [kirmizi]: (289,274)->(283,268) hedef=(251,236) yol=19 adim mermi=2
+[19:27:15.241]   KACIS f512 [kirmizi]: (283,268)->(277,262) hedef=(251,236) yol=16 adim mermi=2
+[19:27:15.275]   KACIS f513 [kirmizi]: (277,262)->(271,256) hedef=(251,236) yol=13 adim mermi=2
+[19:27:15.303]   KACIS f514 [kirmizi]: (271,256)->(265,250) hedef=(251,236) yol=10 adim mermi=2
+[19:27:15.338]   KACIS f515 [kirmizi]: (265,250)->(259,244) hedef=(251,236) yol=7 adim mermi=2
+[19:27:15.373]   KACIS f516 [kirmizi]: (259,244)->(253,238) hedef=(251,236) yol=4 adim mermi=2
+[19:27:16.199]   HASAR -1 (HP 14->13) kalp=(253,238) kutusu=[253,238 - 269,254], mermi=1
+[19:27:16.199]     temas yok: KR (karma) zehri ya da listede olmayan bir mermi
+[19:27:16.199]     obj499 kutu=[-214,239 - -43,368] hiz=(0.0,0.0) uzaklik=11.0
+[19:27:18.900] TUR 1 BITTI: kacis=81, hasar alinan vurus=7 (-7 HP), en fazla mermi=41
+[19:27:25.955] TUR 2: dusman saldiriyor (HP 13)
+[19:27:25.955]   auto-dodge aktif (mavi ruh), alan x[137..485] y[255..368]
+[19:27:26.935]   KACIS f855 [mavi]: (317,369)->(311,361) hedef=(235,341) yol=41 adim mermi=32
+[19:27:26.963]   KACIS f856 [mavi]: (311,361)->(305,355) hedef=(241,341) yol=35 adim mermi=32
+[19:27:26.998]   KACIS f857 [mavi]: (305,355)->(299,349) hedef=(247,341) yol=29 adim mermi=32
+[19:27:27.025]   KACIS f858 [mavi]: (299,349)->(293,343) hedef=(253,341) yol=23 adim mermi=32
+[19:27:27.060]   KACIS f859 [mavi]: (293,343)->(291,347) hedef=(259,341) yol=19 adim mermi=32
+[19:27:27.102]   KACIS f860 [mavi]: (291,347)->(285,347) hedef=(265,341) yol=13 adim mermi=32
+[19:27:27.136]   KACIS f861 [mavi]: (285,347)->(279,347) hedef=(271,341) yol=7 adim mermi=32
+[19:27:27.164]   KACIS f862 [mavi]: (279,348)->(273,341) hedef=(271,339) yol=4 adim mermi=32
+[19:27:27.199]   KACIS f863 [mavi]: (273,341)->(267,335) hedef=(265,333) yol=4 adim mermi=32
+[19:27:27.227]   KACIS f864 [mavi]: (267,335)->(261,329) hedef=(259,327) yol=4 adim mermi=32
+[19:27:27.277]   KACIS f865 [mavi]: (261,329)->(255,323) hedef=(175,341) yol=43 adim mermi=32
+[19:27:27.304]   KACIS f866 [mavi]: (255,323)->(249,317) hedef=(181,341) yol=37 adim mermi=32
+[19:27:27.338]   KACIS f867 [mavi]: (249,317)->(243,323) hedef=(187,341) yol=32 adim mermi=32
+[19:27:27.366]   KACIS f868 [mavi]: (243,323)->(237,329) hedef=(193,341) yol=29 adim mermi=32
+[19:27:27.401]   KACIS f869 [mavi]: (237,329)->(235,335) hedef=(199,341) yol=26 adim mermi=32
+[19:27:27.442]   KACIS f870 [mavi]: (235,335)->(241,341) hedef=(205,341) yol=23 adim mermi=32
+[19:27:27.477]   KACIS f871 [mavi]: (241,341)->(235,347) hedef=(211,341) yol=15 adim mermi=32
+[19:27:27.504]   KACIS f872 [mavi]: (235,347)->(229,347) hedef=(211,335) yol=12 adim mermi=32
+[19:27:27.540]   KACIS f873 [mavi]: (229,347)->(223,341) hedef=(205,323) yol=12 adim mermi=32
+[19:27:27.567]   KACIS f874 [mavi]: (223,341)->(217,335) hedef=(199,317) yol=12 adim mermi=32
+[19:27:27.605]   SIKISTI f875 [mavi]: (217,335)->(217,335) hedef=(217,335) yol=0 adim mermi=32
+[19:27:27.647]   SIKISTI f876 [mavi]: (217,335)->(217,335) hedef=(217,335) yol=0 adim mermi=32
+[19:27:27.682]   SIKISTI f877 [mavi]: (217,336)->(217,335) hedef=(217,335) yol=0 adim mermi=32
+[19:27:27.709]   SIKISTI f878 [mavi]: (217,335)->(217,335) hedef=(217,335) yol=0 adim mermi=32
+[19:27:27.741]   KACIS f879 [mavi]: (217,335)->(217,341) hedef=(257,341) yol=23 adim mermi=32
+[19:27:27.769]   KACIS f880 [mavi]: (217,341)->(217,347) hedef=(251,341) yol=20 adim mermi=32
+[19:27:27.803]   KACIS f881 [mavi]: (217,347)->(223,347) hedef=(245,341) yol=14 adim mermi=32
+[19:27:27.845]   KACIS f882 [mavi]: (223,347)->(229,347) hedef=(245,335) yol=11 adim mermi=32
+[19:27:27.880]   KACIS f883 [mavi]: (229,348)->(235,341) hedef=(251,325) yol=11 adim mermi=32
+[19:27:27.907]   KACIS f884 [mavi]: (235,341)->(241,335) hedef=(257,319) yol=11 adim mermi=32
+[19:27:27.945]   SIKISTI f885 [mavi]: (241,335)->(241,335) hedef=(241,335) yol=0 adim mermi=32
+[19:27:27.973]   SIKISTI f886 [mavi]: (241,335)->(241,335) hedef=(241,335) yol=0 adim mermi=32
+[19:27:28.021]   SIKISTI f887 [mavi]: (241,336)->(241,335) hedef=(241,335) yol=0 adim mermi=32
+[19:27:28.049]   SIKISTI f888 [mavi]: (241,335)->(241,335) hedef=(241,335) yol=0 adim mermi=32
+[19:27:28.081]   KACIS f889 [mavi]: (241,335)->(235,341) hedef=(199,341) yol=23 adim mermi=32
+[19:27:28.109]   KACIS f890 [mavi]: (235,341)->(229,347) hedef=(205,341) yol=15 adim mermi=32
+[19:27:28.143]   KACIS f891 [mavi]: (229,347)->(223,347) hedef=(211,341) yol=9 adim mermi=32
+[19:27:28.185]   KACIS f892 [mavi]: (223,347)->(217,341) hedef=(211,335) yol=6 adim mermi=32
+[19:27:28.220]   KACIS f893 [mavi]: (217,341)->(211,335) hedef=(205,329) yol=6 adim mermi=32
+[19:27:28.248]   KACIS f894 [mavi]: (211,335)->(205,329) hedef=(199,323) yol=6 adim mermi=32
+[19:27:28.286]   SIKISTI f895 [mavi]: (205,329)->(205,329) hedef=(205,329) yol=0 adim mermi=32
+[19:27:28.314]   SIKISTI f896 [mavi]: (205,329)->(205,329) hedef=(205,329) yol=0 adim mermi=32
+[19:27:28.348]   SIKISTI f897 [mavi]: (205,330)->(205,329) hedef=(205,329) yol=0 adim mermi=32
+[19:27:28.390]   SIKISTI f898 [mavi]: (205,329)->(205,329) hedef=(205,329) yol=0 adim mermi=32
+[19:27:28.422]   KACIS f899 [mavi]: (205,329)->(211,335) hedef=(257,341) yol=26 adim mermi=32
+[19:27:28.448]   KACIS f900 [mavi]: (211,335)->(211,341) hedef=(251,341) yol=23 adim mermi=32
+[19:27:28.484]   KACIS f901 [mavi]: (211,341)->(211,347) hedef=(245,341) yol=20 adim mermi=32
+[19:27:28.512]   KACIS f902 [mavi]: (211,347)->(217,347) hedef=(245,335) yol=17 adim mermi=32
+[19:27:28.546]   KACIS f903 [mavi]: (217,347)->(223,347) hedef=(251,323) yol=17 adim mermi=32
+[19:27:28.588]   KACIS f904 [mavi]: (223,348)->(229,341) hedef=(257,313) yol=17 adim mermi=32
+[19:27:28.627]   SIKISTI f905 [mavi]: (229,341)->(229,341) hedef=(229,341) yol=0 adim mermi=32
+[19:27:28.654]   SIKISTI f906 [mavi]: (229,341)->(229,341) hedef=(229,341) yol=0 adim mermi=32
+[19:27:28.688]   SIKISTI f907 [mavi]: (229,342)->(229,341) hedef=(229,341) yol=0 adim mermi=32
+[19:27:28.716]   SIKISTI f908 [mavi]: (229,341)->(229,341) hedef=(229,341) yol=0 adim mermi=32
+[19:27:28.748]   KACIS f909 [mavi]: (229,341)->(223,347) hedef=(199,341) yol=15 adim mermi=32
+[19:27:28.790]   KACIS f910 [mavi]: (223,347)->(217,347) hedef=(205,341) yol=9 adim mermi=32
+[19:27:28.824]   KACIS f911 [mavi]: (217,347)->(211,341) hedef=(211,341) yol=3 adim mermi=32
+[19:27:28.886]   KACIS f913 [mavi]: (211,342)->(205,335) hedef=(205,335) yol=3 adim mermi=32
+[19:27:28.915]   KACIS f914 [mavi]: (205,335)->(199,329) hedef=(199,329) yol=3 adim mermi=32
+[19:27:28.953]   SIKISTI f915 [mavi]: (199,329)->(199,329) hedef=(199,329) yol=0 adim mermi=32
+[19:27:28.994]   SIKISTI f916 [mavi]: (199,329)->(199,329) hedef=(199,329) yol=0 adim mermi=32
+[19:27:29.030]   SIKISTI f917 [mavi]: (199,330)->(199,329) hedef=(199,329) yol=0 adim mermi=32
+[19:27:29.057]   SIKISTI f918 [mavi]: (199,329)->(199,329) hedef=(199,329) yol=0 adim mermi=32
+[19:27:29.081]   KACIS f919 [mavi]: (199,329)->(205,329) hedef=(257,341) yol=29 adim mermi=32
+[19:27:29.116]   KACIS f920 [mavi]: (205,330)->(205,335) hedef=(251,341) yol=26 adim mermi=28
+[19:27:29.165]   KACIS f921 [mavi]: (205,335)->(205,341) hedef=(245,341) yol=23 adim mermi=28
+[19:27:29.192]   KACIS f922 [mavi]: (205,341)->(205,347) hedef=(245,335) yol=23 adim mermi=28
+[19:27:29.220]   KACIS f923 [mavi]: (205,347)->(211,347) hedef=(251,323) yol=23 adim mermi=28
+[19:27:29.255]   KACIS f924 [mavi]: (211,347)->(217,347) hedef=(257,311) yol=23 adim mermi=28
+[19:27:29.306]   SIKISTI f925 [mavi]: (217,348)->(217,347) hedef=(217,347) yol=0 adim mermi=28
+[19:27:29.334]   SIKISTI f926 [mavi]: (217,347)->(217,347) hedef=(217,347) yol=0 adim mermi=28
+[19:27:29.370]   SIKISTI f927 [mavi]: (217,347)->(217,347) hedef=(217,347) yol=0 adim mermi=28
+[19:27:29.397]   SIKISTI f928 [mavi]: (217,348)->(217,347) hedef=(217,347) yol=0 adim mermi=28
+[19:27:29.442]   KACIS f929 [mavi]: (217,347)->(211,347) hedef=(199,341) yol=9 adim mermi=28
+[19:27:29.470]   KACIS f930 [mavi]: (211,347)->(205,341) hedef=(205,341) yol=3 adim mermi=28
+[19:27:29.609]   KACIS f934 [mavi]: (205,343)->(199,337) hedef=(199,337) yol=3 adim mermi=28
+[19:27:29.647]   SIKISTI f935 [mavi]: (199,337)->(199,337) hedef=(199,337) yol=0 adim mermi=28
+[19:27:29.675]   SIKISTI f936 [mavi]: (199,337)->(199,337) hedef=(199,337) yol=0 adim mermi=28
+[19:27:29.710]   SIKISTI f937 [mavi]: (199,338)->(199,337) hedef=(199,337) yol=0 adim mermi=28
+[19:27:29.745]   SIKISTI f938 [mavi]: (199,337)->(199,337) hedef=(199,337) yol=0 adim mermi=28
+[19:27:29.783]   KACIS f939 [mavi]: (199,337)->(205,331) hedef=(257,341) yol=29 adim mermi=28
+[19:27:29.811]   KACIS f940 [mavi]: (205,331)->(207,337) hedef=(251,341) yol=25 adim mermi=24
+[19:27:29.845]   KACIS f941 [mavi]: (207,337)->(207,343) hedef=(245,341) yol=22 adim mermi=24
+[19:27:29.873]   KACIS f942 [mavi]: (207,343)->(213,347) hedef=(245,335) yol=19 adim mermi=24
+[19:27:29.907]   KACIS f943 [mavi]: (213,347)->(219,347) hedef=(251,323) yol=19 adim mermi=24
+[19:27:29.950]   KACIS f944 [mavi]: (219,347)->(225,343) hedef=(257,311) yol=19 adim mermi=24
+[19:27:29.987]   SIKISTI f945 [mavi]: (225,343)->(225,343) hedef=(225,343) yol=0 adim mermi=24
+[19:27:30.015]   SIKISTI f946 [mavi]: (225,343)->(225,343) hedef=(225,343) yol=0 adim mermi=24
+[19:27:30.049]   SIKISTI f947 [mavi]: (225,344)->(225,343) hedef=(225,343) yol=0 adim mermi=24
+[19:27:30.077]   SIKISTI f948 [mavi]: (225,343)->(229,339) hedef=(229,339) yol=2 adim mermi=24
+[19:27:30.109]   KACIS f949 [mavi]: (229,339)->(235,345) hedef=(199,341) yol=21 adim mermi=24
+[19:27:30.150]   KACIS f950 [mavi]: (235,345)->(229,347) hedef=(205,341) yol=15 adim mermi=24
+[19:27:30.186]   KACIS f951 [mavi]: (229,347)->(223,347) hedef=(211,341) yol=9 adim mermi=24
+[19:27:30.213]   KACIS f952 [mavi]: (223,347)->(217,341) hedef=(211,335) yol=6 adim mermi=24
+[19:27:30.248]   KACIS f953 [mavi]: (217,341)->(211,335) hedef=(205,329) yol=6 adim mermi=24
+[19:27:30.276]   KACIS f954 [mavi]: (211,335)->(205,329) hedef=(199,323) yol=6 adim mermi=24
+[19:27:30.313]   SIKISTI f955 [mavi]: (205,329)->(205,329) hedef=(205,329) yol=0 adim mermi=24
+[19:27:30.362]   SIKISTI f956 [mavi]: (205,329)->(205,329) hedef=(205,329) yol=0 adim mermi=24
+[19:27:30.390]   SIKISTI f957 [mavi]: (205,330)->(205,329) hedef=(205,329) yol=0 adim mermi=24
+[19:27:30.418]   SIKISTI f958 [mavi]: (205,329)->(205,329) hedef=(205,329) yol=0 adim mermi=24
+[19:27:30.449]   KACIS f959 [mavi]: (205,329)->(211,335) hedef=(257,341) yol=26 adim mermi=24
+[19:27:30.491]   KACIS f960 [mavi]: (211,335)->(211,341) hedef=(251,341) yol=23 adim mermi=20
+[19:27:30.525]   KACIS f961 [mavi]: (211,341)->(211,347) hedef=(245,341) yol=20 adim mermi=20
+[19:27:30.554]   KACIS f962 [mavi]: (211,347)->(217,347) hedef=(245,335) yol=17 adim mermi=20
+[19:27:30.588]   KACIS f963 [mavi]: (217,347)->(223,347) hedef=(251,323) yol=17 adim mermi=20
+[19:27:30.616]   KACIS f964 [mavi]: (223,348)->(229,341) hedef=(257,313) yol=17 adim mermi=20
+[19:27:30.653]   SIKISTI f965 [mavi]: (229,341)->(229,341) hedef=(229,341) yol=0 adim mermi=20
+[19:27:30.695]   SIKISTI f966 [mavi]: (229,341)->(229,341) hedef=(229,341) yol=0 adim mermi=20
+[19:27:30.730]   SIKISTI f967 [mavi]: (229,342)->(229,341) hedef=(229,341) yol=0 adim mermi=20
+[19:27:30.758]   SIKISTI f968 [mavi]: (229,341)->(229,341) hedef=(229,341) yol=0 adim mermi=20
+[19:27:30.789]   KACIS f969 [mavi]: (229,341)->(223,347) hedef=(199,341) yol=15 adim mermi=20
+[19:27:30.817]   KACIS f970 [mavi]: (223,347)->(217,347) hedef=(205,341) yol=9 adim mermi=20
+[19:27:30.852]   KACIS f971 [mavi]: (217,347)->(211,341) hedef=(211,341) yol=3 adim mermi=20
+[19:27:30.928]   KACIS f973 [mavi]: (211,342)->(205,335) hedef=(205,335) yol=3 adim mermi=20
+[19:27:30.956]   KACIS f974 [mavi]: (205,335)->(199,329) hedef=(199,329) yol=3 adim mermi=20
+[19:27:30.994]   SIKISTI f975 [mavi]: (199,329)->(199,329) hedef=(199,329) yol=0 adim mermi=20
+[19:27:31.022]   SIKISTI f976 [mavi]: (199,329)->(199,329) hedef=(199,329) yol=0 adim mermi=20
+[19:27:31.056]   SIKISTI f977 [mavi]: (199,330)->(199,329) hedef=(199,329) yol=0 adim mermi=20
+[19:27:31.098]   SIKISTI f978 [mavi]: (199,329)->(199,329) hedef=(199,329) yol=0 adim mermi=20
+[19:27:31.130]   KACIS f979 [mavi]: (199,329)->(205,329) hedef=(257,341) yol=29 adim mermi=20
+[19:27:31.158]   KACIS f980 [mavi]: (205,330)->(205,335) hedef=(251,341) yol=26 adim mermi=16
+[19:27:31.192]   KACIS f981 [mavi]: (205,335)->(205,341) hedef=(245,341) yol=23 adim mermi=16
+[19:27:31.220]   KACIS f982 [mavi]: (205,341)->(205,347) hedef=(245,335) yol=23 adim mermi=16
+[19:27:31.255]   KACIS f983 [mavi]: (205,347)->(211,347) hedef=(251,323) yol=23 adim mermi=16
+[19:27:31.297]   KACIS f984 [mavi]: (211,347)->(217,347) hedef=(257,311) yol=23 adim mermi=16
+[19:27:31.334]   SIKISTI f985 [mavi]: (217,348)->(217,347) hedef=(217,347) yol=0 adim mermi=16
+[19:27:31.369]   SIKISTI f986 [mavi]: (217,347)->(217,347) hedef=(217,347) yol=0 adim mermi=16
+[19:27:31.396]   SIKISTI f987 [mavi]: (217,347)->(217,347) hedef=(217,347) yol=0 adim mermi=16
+[19:27:31.424]   SIKISTI f988 [mavi]: (217,348)->(217,347) hedef=(217,347) yol=0 adim mermi=16
+[19:27:31.470]   KACIS f989 [mavi]: (217,347)->(211,347) hedef=(199,341) yol=9 adim mermi=16
+[19:27:31.498]   KACIS f990 [mavi]: (211,347)->(205,341) hedef=(205,341) yol=3 adim mermi=16
+[19:27:31.637]   KACIS f994 [mavi]: (205,343)->(199,337) hedef=(199,337) yol=3 adim mermi=16
+[19:27:31.672]   KACIS f995 [mavi]: (199,337)->(193,331) hedef=(193,331) yol=3 adim mermi=16
+[19:27:31.699]   KACIS f996 [mavi]: (193,331)->(187,325) hedef=(187,325) yol=3 adim mermi=16
+[19:27:31.733]   KACIS f997 [mavi]: (187,325)->(181,319) hedef=(181,319) yol=3 adim mermi=16
+[19:27:31.761]   KACIS f998 [mavi]: (181,319)->(175,313) hedef=(175,313) yol=3 adim mermi=16
+[19:27:31.796]   KACIS f999 [mavi]: (175,313)->(169,307) hedef=(169,307) yol=3 adim mermi=16
+[19:27:31.838]   KACIS f1000 [mavi]: (169,307)->(163,301) hedef=(163,301) yol=3 adim mermi=12
+[19:27:31.873]   KACIS f1001 [mavi]: (163,301)->(157,295) hedef=(157,295) yol=3 adim mermi=12
+[19:27:31.901]   KACIS f1002 [mavi]: (157,295)->(151,289) hedef=(151,289) yol=3 adim mermi=12
+[19:27:31.935]   KACIS f1003 [mavi]: (151,289)->(145,283) hedef=(145,283) yol=3 adim mermi=12
+[19:27:31.963]   KACIS f1004 [mavi]: (145,283)->(139,277) hedef=(139,277) yol=3 adim mermi=12
+[19:27:32.012]   KACIS f1005 [mavi]: (139,277)->(137,283) hedef=(221,341) yol=52 adim mermi=12
+[19:27:32.039]   KACIS f1006 [mavi]: (137,283)->(137,289) hedef=(215,341) yol=49 adim mermi=12
+[19:27:32.067]   KACIS f1007 [mavi]: (137,289)->(137,295) hedef=(209,341) yol=46 adim mermi=12
+[19:27:32.102]   KACIS f1008 [mavi]: (137,295)->(137,301) hedef=(203,341) yol=43 adim mermi=12
+[19:27:32.150]   KACIS f1009 [mavi]: (137,301)->(137,307) hedef=(197,341) yol=40 adim mermi=12
+[19:27:32.179]   KACIS f1010 [mavi]: (137,307)->(137,313) hedef=(191,341) yol=37 adim mermi=12
+[19:27:32.206]   KACIS f1011 [mavi]: (137,313)->(137,319) hedef=(185,341) yol=34 adim mermi=12
+[19:27:32.240]   KACIS f1012 [mavi]: (137,319)->(137,325) hedef=(179,341) yol=31 adim mermi=12
+[19:27:32.289]   KACIS f1013 [mavi]: (137,325)->(137,331) hedef=(173,341) yol=28 adim mermi=12
+[19:27:32.317]   KACIS f1014 [mavi]: (137,331)->(143,337) hedef=(167,341) yol=15 adim mermi=12
+[19:27:32.352]   HASAR -1 (HP 13->12) kalp=(143,337) kutusu=[143,337 - 159,353], mermi=12
+[19:27:32.352]     obj500 kutu=[148,261 - 155,345] hiz=(-6.0,0.0) uzaklik=0.0
+[19:27:32.352]     obj500 kutu=[148,370 - 155,379] hiz=(-6.0,0.0) uzaklik=17.0
+[19:27:32.352]     obj500 kutu=[28,261 - 35,345] hiz=(-6.0,0.0) uzaklik=108.0
+[19:27:32.352]   KACIS f1015 [mavi]: (143,337)->(149,343) hedef=(161,341) yol=9 adim mermi=12
+[19:27:32.380]   KACIS f1016 [mavi]: (149,343)->(155,337) hedef=(155,337) yol=3 adim mermi=12
+[19:27:32.595]   KACIS f1022 [mavi]: (155,344)->(151,339) hedef=(151,339) yol=2 adim mermi=8
+[19:27:32.629]   KACIS f1023 [mavi]: (151,339)->(145,333) hedef=(145,333) yol=3 adim mermi=8
+[19:27:32.657]   KACIS f1024 [mavi]: (145,333)->(139,327) hedef=(139,327) yol=3 adim mermi=8
+[19:27:32.693]   KACIS f1025 [mavi]: (139,327)->(145,321) hedef=(227,335) yol=44 adim mermi=8
+[19:27:32.734]   KACIS f1026 [mavi]: (145,321)->(151,317) hedef=(221,335) yol=38 adim mermi=8
+[19:27:32.762] TUR 2 BITTI: kacis=159, hasar alinan vurus=1 (-1 HP), en fazla mermi=32
+[19:27:38.212] TUR 3: dusman saldiriyor (HP 7)
+[19:27:38.213]   auto-dodge aktif (mavi ruh), alan x[137..485] y[255..368]
+[19:27:38.456]   HASAR -1 (HP 7->6) kalp=(317,369) kutusu=[317,369 - 333,385], mermi=12
+[19:27:38.456]     temas yok: KR (karma) zehri ya da listede olmayan bir mermi
+[19:27:38.456]     obj500 kutu=[492,290 - 499,379] hiz=(-10.0,0.0) uzaklik=159.0
+[19:27:38.456]     obj500 kutu=[562,370 - 569,379] hiz=(-10.0,0.0) uzaklik=229.0
+[19:27:38.456]     obj500 kutu=[712,290 - 719,379] hiz=(-10.0,0.0) uzaklik=379.0
+[19:27:38.692]   KACIS f1202 [mavi]: (317,369)->(311,361) hedef=(311,361) yol=3 adim mermi=12
+[19:27:38.720]   KACIS f1203 [mavi]: (311,361)->(305,355) hedef=(301,351) yol=5 adim mermi=12
+[19:27:38.754]   KACIS f1204 [mavi]: (305,355)->(299,349) hedef=(291,341) yol=7 adim mermi=12
+[19:27:38.782]   KACIS f1205 [mavi]: (299,349)->(293,343) hedef=(281,331) yol=9 adim mermi=12
+[19:27:38.818]   KACIS f1206 [mavi]: (293,343)->(287,337) hedef=(271,321) yol=11 adim mermi=12
+[19:27:38.859]   KACIS f1207 [mavi]: (287,337)->(281,331) hedef=(261,311) yol=13 adim mermi=12
+[19:27:38.894]   KACIS f1208 [mavi]: (281,331)->(275,325) hedef=(251,301) yol=15 adim mermi=12
+[19:27:38.922]   KACIS f1209 [mavi]: (275,325)->(269,319) hedef=(241,291) yol=17 adim mermi=12
+[19:27:38.957]   KACIS f1210 [mavi]: (269,319)->(263,313) hedef=(231,281) yol=19 adim mermi=12
+[19:27:38.984]   KACIS f1211 [mavi]: (263,313)->(257,307) hedef=(213,263) yol=25 adim mermi=12
+[19:27:39.018]   KACIS f1212 [mavi]: (257,307)->(251,301) hedef=(213,263) yol=22 adim mermi=12
+[19:27:39.060]   KACIS f1213 [mavi]: (251,301)->(245,295) hedef=(213,263) yol=19 adim mermi=12
+[19:27:39.095]   KACIS f1214 [mavi]: (245,295)->(239,289) hedef=(213,263) yol=16 adim mermi=12
+[19:27:39.122]   KACIS f1215 [mavi]: (239,289)->(233,283) hedef=(213,263) yol=13 adim mermi=12
+[19:27:39.157]   KACIS f1216 [mavi]: (233,283)->(227,277) hedef=(213,263) yol=10 adim mermi=12
+[19:27:39.185]   KACIS f1217 [mavi]: (227,277)->(221,271) hedef=(213,263) yol=7 adim mermi=12
+[19:27:39.234]   KACIS f1218 [mavi]: (221,271)->(215,265) hedef=(213,263) yol=4 adim mermi=12
+[19:27:39.769]   KACIS f1234 [mavi]: (215,329)->(211,325) hedef=(211,325) yol=2 adim mermi=12
+[19:27:39.804]   KACIS f1235 [mavi]: (211,325)->(205,319) hedef=(201,315) yol=5 adim mermi=12
+[19:27:39.831]   KACIS f1236 [mavi]: (205,319)->(199,313) hedef=(191,305) yol=7 adim mermi=12
+[19:27:39.865]   KACIS f1237 [mavi]: (199,313)->(193,307) hedef=(181,295) yol=9 adim mermi=12
+[19:27:39.914]   KACIS f1238 [mavi]: (193,307)->(187,301) hedef=(171,285) yol=11 adim mermi=12
+[19:27:39.942]   KACIS f1239 [mavi]: (187,301)->(181,295) hedef=(149,263) yol=19 adim mermi=12
+[19:27:39.970]   KACIS f1240 [mavi]: (181,295)->(175,289) hedef=(149,263) yol=16 adim mermi=12
+[19:27:40.005]   KACIS f1241 [mavi]: (175,289)->(169,283) hedef=(149,263) yol=13 adim mermi=12
+[19:27:40.053]   KACIS f1242 [mavi]: (169,283)->(163,277) hedef=(149,263) yol=10 adim mermi=12
+[19:27:40.081]   KACIS f1243 [mavi]: (163,277)->(157,271) hedef=(149,263) yol=7 adim mermi=12
+[19:27:40.109]   KACIS f1244 [mavi]: (157,271)->(151,265) hedef=(149,263) yol=4 adim mermi=12
+[19:27:40.331]   KACIS f1250 [mavi]: (151,272)->(145,265) hedef=(143,261) yol=5 adim mermi=11
+[19:27:40.761]   KACIS f1263 [mavi]: (145,305)->(141,301) hedef=(141,301) yol=2 adim mermi=10
+[19:27:40.797]   KACIS f1264 [mavi]: (141,301)->(137,295) hedef=(143,263) yol=19 adim mermi=10
+[19:27:40.838]   KACIS f1265 [mavi]: (137,295)->(137,289) hedef=(143,263) yol=16 adim mermi=10
+[19:27:40.872]   KACIS f1266 [mavi]: (137,289)->(137,283) hedef=(143,263) yol=13 adim mermi=10
+[19:27:40.900]   KACIS f1267 [mavi]: (137,283)->(137,277) hedef=(143,263) yol=10 adim mermi=9
+[19:27:40.935]   KACIS f1268 [mavi]: (137,277)->(137,271) hedef=(143,263) yol=7 adim mermi=9
+[19:27:40.963]   KACIS f1269 [mavi]: (137,271)->(141,265) hedef=(143,263) yol=4 adim mermi=9
+[19:27:41.171]   KACIS f1275 [mavi]: (141,272)->(139,265) hedef=(143,261) yol=5 adim mermi=8
+[19:27:41.380]   KACIS f1281 [mavi]: (139,272)->(139,265) hedef=(143,261) yol=5 adim mermi=8
+[19:27:41.581]   KACIS f1287 [mavi]: (139,272)->(139,265) hedef=(143,261) yol=5 adim mermi=8
+[19:27:41.956]   KACIS f1298 [mavi]: (139,293)->(145,287) hedef=(145,287) yol=3 adim mermi=6
+[19:27:41.984]   KACIS f1299 [mavi]: (145,287)->(151,281) hedef=(155,277) yol=5 adim mermi=6
+[19:27:42.019]   KACIS f1300 [mavi]: (151,281)->(145,275) hedef=(143,263) yol=9 adim mermi=6
+[19:27:42.060]   KACIS f1301 [mavi]: (145,275)->(139,269) hedef=(143,263) yol=6 adim mermi=6
+[19:27:42.123]   KACIS f1303 [mavi]: (139,270)->(141,263) hedef=(143,261) yol=4 adim mermi=6
+[19:27:42.324]   KACIS f1309 [mavi]: (141,270)->(141,263) hedef=(143,261) yol=4 adim mermi=6
+[19:27:42.699]   KACIS f1320 [mavi]: (141,291)->(145,287) hedef=(145,287) yol=2 adim mermi=6
+[19:27:42.727]   KACIS f1321 [mavi]: (145,287)->(151,281) hedef=(155,277) yol=5 adim mermi=6
+[19:27:42.762]   KACIS f1322 [mavi]: (151,281)->(145,275) hedef=(143,263) yol=9 adim mermi=6
+[19:27:42.789]   KACIS f1323 [mavi]: (145,275)->(139,269) hedef=(143,263) yol=6 adim mermi=6
+[19:27:42.866]   KACIS f1325 [mavi]: (139,270)->(141,263) hedef=(143,261) yol=4 adim mermi=5
+[19:27:43.060]   KACIS f1331 [mavi]: (141,270)->(141,263) hedef=(143,261) yol=4 adim mermi=5
+[19:27:44.650] TUR 3 BITTI: kacis=51, hasar alinan vurus=1 (-1 HP), en fazla mermi=12
+[19:27:50.490] TUR 4: dusman saldiriyor (HP 6)
+[19:27:50.490]   auto-dodge aktif (mavi ruh), alan x[137..485] y[255..368]
+[19:27:51.560]   KACIS f1582 [mavi]: (317,369)->(311,361) hedef=(289,339) yol=14 adim mermi=24
+[19:27:51.588]   KACIS f1583 [mavi]: (311,361)->(305,355) hedef=(289,339) yol=11 adim mermi=24
+[19:27:51.616]   KACIS f1584 [mavi]: (305,355)->(299,349) hedef=(289,339) yol=8 adim mermi=24
+[19:27:51.650]   KACIS f1585 [mavi]: (299,349)->(293,343) hedef=(289,339) yol=5 adim mermi=24
+[19:27:51.685]   KACIS f1586 [mavi]: (293,343)->(289,339) hedef=(289,339) yol=2 adim mermi=24
+[19:27:51.762]   KACIS f1588 [mavi]: (289,340)->(287,337) hedef=(287,337) yol=1 adim mermi=24
+[19:27:51.928]   KACIS f1593 [mavi]: (287,341)->(285,339) hedef=(285,339) yol=1 adim mermi=24
+[19:27:51.990]   KACIS f1595 [mavi]: (285,340)->(283,337) hedef=(283,337) yol=1 adim mermi=24
+[19:27:52.296]   KACIS f1604 [mavi]: (283,354)->(287,351) hedef=(287,351) yol=2 adim mermi=24
+[19:27:52.331]   KACIS f1605 [mavi]: (287,351)->(293,345) hedef=(293,345) yol=3 adim mermi=24
+[19:27:52.359]   KACIS f1606 [mavi]: (293,345)->(287,339) hedef=(287,339) yol=3 adim mermi=24
+[19:27:52.421]   KACIS f1608 [mavi]: (287,340)->(285,337) hedef=(285,337) yol=1 adim mermi=24
+[19:27:52.595]   KACIS f1613 [mavi]: (285,341)->(283,339) hedef=(283,339) yol=1 adim mermi=24
+[19:27:52.657]   KACIS f1615 [mavi]: (283,340)->(281,337) hedef=(281,337) yol=1 adim mermi=24
+[19:27:52.824]   KACIS f1620 [mavi]: (281,341)->(279,339) hedef=(279,339) yol=1 adim mermi=24
+[19:27:52.900]   KACIS f1622 [mavi]: (279,340)->(277,337) hedef=(277,337) yol=1 adim mermi=24
+[19:27:53.199]   KACIS f1631 [mavi]: (277,354)->(281,351) hedef=(281,351) yol=2 adim mermi=24
+[19:27:53.241]   KACIS f1632 [mavi]: (281,351)->(287,345) hedef=(287,345) yol=3 adim mermi=24
+[19:27:53.275]   KACIS f1633 [mavi]: (287,345)->(281,339) hedef=(281,339) yol=3 adim mermi=24
+[19:27:53.338]   KACIS f1635 [mavi]: (281,340)->(279,337) hedef=(279,337) yol=1 adim mermi=20
+[19:27:53.505]   KACIS f1640 [mavi]: (279,341)->(277,339) hedef=(277,339) yol=1 adim mermi=20
+[19:27:53.581]   KACIS f1642 [mavi]: (277,340)->(275,337) hedef=(275,337) yol=1 adim mermi=20
+[19:27:53.741]   KACIS f1647 [mavi]: (275,341)->(273,339) hedef=(273,339) yol=1 adim mermi=20
+[19:27:53.810]   KACIS f1649 [mavi]: (273,340)->(271,337) hedef=(271,337) yol=1 adim mermi=20
+[19:27:53.984]   KACIS f1654 [mavi]: (271,341)->(269,339) hedef=(269,339) yol=1 adim mermi=18
+[19:27:54.247]   KACIS f1662 [mavi]: (269,352)->(265,349) hedef=(265,349) yol=2 adim mermi=18
+[19:27:54.310]   KACIS f1664 [mavi]: (265,350)->(263,347) hedef=(263,347) yol=1 adim mermi=18
+[19:27:54.476]   KACIS f1669 [mavi]: (263,351)->(261,349) hedef=(261,349) yol=1 adim mermi=18
+[19:27:54.615]   KACIS f1673 [mavi]: (261,351)->(259,349) hedef=(259,349) yol=1 adim mermi=18
+[19:27:54.678]   KACIS f1675 [mavi]: (259,350)->(257,347) hedef=(257,347) yol=1 adim mermi=16
+[19:27:54.865]   KACIS f1680 [mavi]: (257,351)->(255,349) hedef=(255,349) yol=1 adim mermi=16
+[19:27:54.928]   KACIS f1682 [mavi]: (255,350)->(253,347) hedef=(253,347) yol=1 adim mermi=14
+[19:27:55.095]   KACIS f1687 [mavi]: (253,351)->(251,349) hedef=(251,349) yol=1 adim mermi=14
+[19:27:55.158]   KACIS f1689 [mavi]: (251,350)->(249,347) hedef=(249,347) yol=1 adim mermi=14
+[19:27:55.435]   KACIS f1697 [mavi]: (249,360)->(245,357) hedef=(245,357) yol=2 adim mermi=14
+[19:27:55.470]   KACIS f1698 [mavi]: (245,357)->(239,351) hedef=(237,349) yol=4 adim mermi=14
+[19:27:55.512]   KACIS f1699 [mavi]: (239,351)->(237,349) hedef=(237,349) yol=1 adim mermi=14
+[19:27:55.580]   KACIS f1701 [mavi]: (237,350)->(235,347) hedef=(235,347) yol=1 adim mermi=14
+[19:27:55.748]   KACIS f1706 [mavi]: (235,351)->(233,349) hedef=(233,349) yol=1 adim mermi=12
+[19:27:55.810]   KACIS f1708 [mavi]: (233,350)->(231,347) hedef=(231,347) yol=1 adim mermi=10
+[19:27:56.088]   KACIS f1716 [mavi]: (231,360)->(237,355) hedef=(237,355) yol=3 adim mermi=10
+[19:27:56.116]   KACIS f1717 [mavi]: (237,355)->(243,349) hedef=(243,349) yol=3 adim mermi=10
+[19:27:56.151]   KACIS f1718 [mavi]: (243,349)->(249,343) hedef=(251,341) yol=4 adim mermi=10
+[19:27:56.192]   KACIS f1719 [mavi]: (249,343)->(255,337) hedef=(257,335) yol=4 adim mermi=10
+[19:27:56.227]   KACIS f1720 [mavi]: (255,337)->(261,331) hedef=(265,327) yol=5 adim mermi=10
+[19:27:56.254]   KACIS f1721 [mavi]: (261,331)->(267,325) hedef=(271,321) yol=5 adim mermi=10
+[19:27:56.289]   KACIS f1722 [mavi]: (267,325)->(273,319) hedef=(279,313) yol=6 adim mermi=10
+[19:27:56.317]   KACIS f1723 [mavi]: (273,319)->(267,313) hedef=(263,309) yol=5 adim mermi=10
+[19:27:56.352]   KACIS f1724 [mavi]: (267,313)->(263,309) hedef=(263,309) yol=2 adim mermi=10
+[19:27:56.428]   KACIS f1726 [mavi]: (263,310)->(261,307) hedef=(261,307) yol=1 adim mermi=10
+[19:27:56.588]   KACIS f1731 [mavi]: (261,311)->(259,309) hedef=(259,309) yol=1 adim mermi=8
+[19:27:56.789]   KACIS f1737 [mavi]: (259,316)->(253,309) hedef=(251,307) yol=4 adim mermi=8
+[19:27:56.859]   KACIS f1739 [mavi]: (253,310)->(251,307) hedef=(251,307) yol=1 adim mermi=8
+[19:27:57.032]   KACIS f1744 [mavi]: (251,311)->(249,309) hedef=(249,309) yol=1 adim mermi=4
+[19:27:57.094]   KACIS f1746 [mavi]: (249,310)->(247,307) hedef=(247,307) yol=1 adim mermi=4
+[19:27:57.261]   KACIS f1751 [mavi]: (247,311)->(253,305) hedef=(257,301) yol=5 adim mermi=4
+[19:27:57.602] TUR 4 BITTI: kacis=56, hasar alinan vurus=0 (-0 HP), en fazla mermi=24
+[19:28:05.067] TUR 5: dusman saldiriyor (HP 6)
+[19:28:05.067]   auto-dodge aktif (mavi ruh), alan x[137..485] y[255..368]
+[19:28:06.636]   KACIS f2027 [mavi]: (317,369)->(319,361) hedef=(319,361) yol=3 adim mermi=45
+[19:28:06.671]   KACIS f2028 [mavi]: (319,361)->(323,357) hedef=(323,357) yol=2 adim mermi=45
+[19:28:06.699]   KACIS f2029 [mavi]: (323,357)->(327,353) hedef=(327,353) yol=2 adim mermi=45
+[19:28:06.734]   KACIS f2030 [mavi]: (327,353)->(331,349) hedef=(331,349) yol=2 adim mermi=45
+[19:28:06.761]   KACIS f2031 [mavi]: (331,349)->(335,345) hedef=(335,345) yol=2 adim mermi=45
+[19:28:06.796]   KACIS f2032 [mavi]: (335,345)->(329,339) hedef=(321,331) yol=7 adim mermi=45
+[19:28:06.838]   KACIS f2033 [mavi]: (329,339)->(323,333) hedef=(321,331) yol=4 adim mermi=45
+[19:28:07.039]   KACIS f2039 [mavi]: (323,340)->(317,333) hedef=(313,329) yol=5 adim mermi=45
+[19:28:07.234]   KACIS f2045 [mavi]: (317,340)->(311,333) hedef=(307,329) yol=5 adim mermi=45
+[19:28:09.428]   KACIS f2110 [mavi]: (486,339)->(479,333) hedef=(475,329) yol=5 adim mermi=45
+[19:28:09.629]   KACIS f2116 [mavi]: (479,340)->(473,333) hedef=(469,329) yol=5 adim mermi=45
+[19:28:09.831]   KACIS f2122 [mavi]: (473,340)->(467,333) hedef=(463,329) yol=5 adim mermi=44
+[19:28:10.747]   KACIS f2149 [mavi]: (486,339)->(479,333) hedef=(475,329) yol=5 adim mermi=37
+[19:28:10.963]   KACIS f2155 [mavi]: (479,340)->(473,333) hedef=(469,329) yol=5 adim mermi=35
+[19:28:11.164]   KACIS f2161 [mavi]: (473,340)->(467,333) hedef=(463,329) yol=5 adim mermi=34
+[19:28:11.872]   KACIS f2182 [mavi]: (486,339)->(479,333) hedef=(475,329) yol=5 adim mermi=28
+[19:28:12.074]   KACIS f2188 [mavi]: (479,340)->(473,333) hedef=(469,329) yol=5 adim mermi=25
+[19:28:12.289]   KACIS f2194 [mavi]: (473,340)->(467,333) hedef=(463,329) yol=5 adim mermi=22
+[19:28:12.491]   KACIS f2200 [mavi]: (467,340)->(461,333) hedef=(457,329) yol=5 adim mermi=20
+[19:28:12.692]   KACIS f2206 [mavi]: (461,340)->(457,335) hedef=(457,335) yol=2 adim mermi=19
+[19:28:12.741]   KACIS f2207 [mavi]: (457,335)->(461,331) hedef=(461,331) yol=2 adim mermi=19
+[19:28:12.768]   KACIS f2208 [mavi]: (461,331)->(467,325) hedef=(469,323) yol=4 adim mermi=18
+[19:28:12.803]   KACIS f2209 [mavi]: (467,325)->(473,319) hedef=(479,313) yol=6 adim mermi=18
+[19:28:12.832]   KACIS f2210 [mavi]: (473,319)->(467,313) hedef=(373,357) yol=50 adim mermi=18
+[19:28:12.880]   KACIS f2211 [mavi]: (467,313)->(461,307) hedef=(377,357) yol=45 adim mermi=18
+[19:28:12.908]   KACIS f2212 [mavi]: (461,307)->(455,301) hedef=(385,261) yol=38 adim mermi=17
+[19:28:12.943]   KACIS f2213 [mavi]: (455,301)->(449,295) hedef=(393,261) yol=31 adim mermi=17
+[19:28:12.970]   KACIS f2214 [mavi]: (449,295)->(443,289) hedef=(403,261) yol=23 adim mermi=17
+[19:28:13.017]   HASAR -1 (HP 6->5) kalp=(443,289) kutusu=[443,289 - 459,305], mermi=16
+[19:28:13.017]     obj500 kutu=[439,261 - 446,345] hiz=(9.0,0.0) uzaklik=0.0
+[19:28:13.017]     obj502 kutu=[451,358 - 459,402] hiz=(4.0,0.0) uzaklik=53.0
+[19:28:13.018]     obj502 kutu=[436,358 - 444,402] hiz=(4.0,0.0) uzaklik=53.0
+[19:28:13.018]   KACIS f2215 [mavi]: (443,289)->(437,283) hedef=(411,261) yol=16 adim mermi=16
+[19:28:13.046]   HASAR -1 (HP 5->4) kalp=(437,283) kutusu=[437,283 - 453,299], mermi=16
+[19:28:13.046]     obj500 kutu=[448,261 - 455,345] hiz=(9.0,0.0) uzaklik=0.0
+[19:28:13.046]     obj502 kutu=[440,358 - 448,402] hiz=(4.0,0.0) uzaklik=59.0
+[19:28:13.046]     obj502 kutu=[455,358 - 463,402] hiz=(4.0,0.0) uzaklik=59.0
+[19:28:13.046]   KACIS f2216 [mavi]: (437,283)->(431,277) hedef=(421,267) yol=8 adim mermi=16
+[19:28:13.546] TUR 5 BITTI: kacis=30, hasar alinan vurus=2 (-2 HP), en fazla mermi=45
+[19:28:19.775] TUR 6: dusman saldiriyor (HP 1)
+[19:28:19.775]   auto-dodge aktif (mavi ruh), alan x[137..485] y[255..368]
+[19:28:21.338]   KACIS f2462 [mavi]: (317,369)->(311,361) hedef=(311,361) yol=3 adim mermi=64
+[19:28:21.401]   KACIS f2464 [mavi]: (311,362)->(307,357) hedef=(307,357) yol=2 adim mermi=64
+[19:28:21.435]   KACIS f2465 [mavi]: (307,357)->(303,353) hedef=(303,353) yol=2 adim mermi=64
+[19:28:21.477]   KACIS f2466 [mavi]: (303,353)->(299,349) hedef=(299,349) yol=2 adim mermi=64
+[19:28:21.512]   KACIS f2467 [mavi]: (299,349)->(295,345) hedef=(295,345) yol=2 adim mermi=64
+[19:28:21.546]   KACIS f2468 [mavi]: (295,345)->(289,339) hedef=(281,331) yol=7 adim mermi=64
+[19:28:21.573]   KACIS f2469 [mavi]: (289,339)->(283,333) hedef=(281,331) yol=4 adim mermi=64
+[19:28:21.775]   KACIS f2475 [mavi]: (283,340)->(277,333) hedef=(273,329) yol=5 adim mermi=64
+[19:28:21.977]   KACIS f2481 [mavi]: (277,340)->(271,333) hedef=(267,329) yol=5 adim mermi=64
+[19:28:22.178]   KACIS f2487 [mavi]: (271,340)->(265,333) hedef=(261,329) yol=5 adim mermi=64
+[19:28:23.595]   KACIS f2529 [mavi]: (137,330)->(137,323) hedef=(143,291) yol=19 adim mermi=64
+[19:28:23.636]   KACIS f2530 [mavi]: (137,323)->(137,317) hedef=(143,293) yol=15 adim mermi=64
+[19:28:23.671]   KACIS f2531 [mavi]: (137,317)->(137,311) hedef=(143,293) yol=12 adim mermi=64
+[19:28:23.706]   KACIS f2532 [mavi]: (137,311)->(137,305) hedef=(143,293) yol=9 adim mermi=64
+[19:28:23.734]   KACIS f2533 [mavi]: (137,305)->(137,299) hedef=(143,293) yol=6 adim mermi=64
+[19:28:23.796]   KACIS f2535 [mavi]: (137,300)->(141,293) hedef=(143,291) yol=4 adim mermi=64
+[19:28:23.997]   KACIS f2541 [mavi]: (141,300)->(141,293) hedef=(143,291) yol=4 adim mermi=64
+[19:28:25.115]   KACIS f2574 [mavi]: (137,339)->(139,333) hedef=(143,329) yol=5 adim mermi=58
+[19:28:25.331]   KACIS f2580 [mavi]: (139,340)->(139,333) hedef=(143,329) yol=5 adim mermi=56
+[19:28:25.532]   KACIS f2586 [mavi]: (139,340)->(139,333) hedef=(143,329) yol=5 adim mermi=55
+[19:28:25.734]   KACIS f2592 [mavi]: (139,340)->(139,333) hedef=(143,329) yol=5 adim mermi=53
+[19:28:25.935]   KACIS f2598 [mavi]: (139,340)->(145,333) hedef=(149,329) yol=5 adim mermi=51
+[19:28:26.136]   KACIS f2604 [mavi]: (145,340)->(149,335) hedef=(149,335) yol=2 adim mermi=50
+[19:28:26.178]   KACIS f2605 [mavi]: (149,335)->(151,333) hedef=(151,333) yol=1 adim mermi=49
+[19:28:26.212]   KACIS f2606 [mavi]: (151,333)->(155,329) hedef=(155,329) yol=2 adim mermi=49
+[19:28:26.240]   KACIS f2607 [mavi]: (155,329)->(157,327) hedef=(157,327) yol=1 adim mermi=49
+[19:28:26.275]   KACIS f2608 [mavi]: (157,327)->(161,323) hedef=(161,323) yol=2 adim mermi=49
+[19:28:26.302]   KACIS f2609 [mavi]: (161,323)->(163,321) hedef=(163,321) yol=1 adim mermi=48
+[19:28:26.338]   KACIS f2610 [mavi]: (158,319)->(165,313) hedef=(167,311) yol=4 adim mermi=48
+[19:28:26.380]   KACIS f2611 [mavi]: (165,313)->(169,311) hedef=(169,311) yol=2 adim mermi=48
+[19:28:26.414]   KACIS f2612 [mavi]: (169,311)->(173,311) hedef=(173,311) yol=2 adim mermi=48
+[19:28:26.441]   KACIS f2613 [mavi]: (173,311)->(175,311) hedef=(175,311) yol=1 adim mermi=47
+[19:28:26.476]   KACIS f2614 [mavi]: (175,312)->(179,307) hedef=(179,307) yol=2 adim mermi=47
+[19:28:26.504]   KACIS f2615 [mavi]: (179,307)->(181,305) hedef=(181,305) yol=1 adim mermi=47
+[19:28:26.539]   KACIS f2616 [mavi]: (181,305)->(185,301) hedef=(185,301) yol=2 adim mermi=47
+[19:28:26.581]   KACIS f2617 [mavi]: (185,301)->(187,299) hedef=(187,299) yol=1 adim mermi=46
+[19:28:26.615]   KACIS f2618 [mavi]: (187,299)->(191,295) hedef=(191,295) yol=2 adim mermi=46
+[19:28:26.643]   KACIS f2619 [mavi]: (191,295)->(193,293) hedef=(193,293) yol=1 adim mermi=46
+[19:28:26.678]   KACIS f2620 [mavi]: (193,293)->(197,291) hedef=(197,291) yol=2 adim mermi=45
+[19:28:26.706]   KACIS f2621 [mavi]: (197,291)->(199,291) hedef=(199,291) yol=1 adim mermi=45
+[19:28:26.740]   KACIS f2622 [mavi]: (199,291)->(203,291) hedef=(203,291) yol=2 adim mermi=45
+[19:28:26.789]   KACIS f2623 [mavi]: (203,292)->(205,291) hedef=(205,291) yol=1 adim mermi=45
+[19:28:26.817]   KACIS f2624 [mavi]: (205,291)->(209,291) hedef=(209,291) yol=2 adim mermi=44
+[19:28:26.852]   KACIS f2625 [mavi]: (209,291)->(211,291) hedef=(211,291) yol=1 adim mermi=44
+[19:28:26.880]   KACIS f2626 [mavi]: (211,292)->(215,291) hedef=(215,291) yol=2 adim mermi=44
+[19:28:26.914]   KACIS f2627 [mavi]: (215,291)->(217,289) hedef=(217,289) yol=1 adim mermi=44
+[19:28:26.956]   KACIS f2628 [mavi]: (217,289)->(221,285) hedef=(221,285) yol=2 adim mermi=42
+[19:28:26.990]   KACIS f2629 [mavi]: (221,285)->(223,283) hedef=(223,283) yol=1 adim mermi=42
+[19:28:27.019]   KACIS f2630 [mavi]: (223,283)->(227,279) hedef=(227,279) yol=2 adim mermi=42
+[19:28:27.053]   KACIS f2631 [mavi]: (227,279)->(229,277) hedef=(229,277) yol=1 adim mermi=42
+[19:28:27.081]   KACIS f2632 [mavi]: (229,277)->(233,273) hedef=(233,273) yol=2 adim mermi=41
+[19:28:27.136]   KACIS f2633 [mavi]: (233,273)->(235,271) hedef=(235,271) yol=1 adim mermi=41
+[19:28:27.158]   KACIS f2634 [mavi]: (235,271)->(239,267) hedef=(239,267) yol=2 adim mermi=41
+[19:28:27.206]   KACIS f2635 [mavi]: (239,267)->(241,265) hedef=(241,265) yol=1 adim mermi=40
+[19:28:27.234]   KACIS f2636 [mavi]: (241,265)->(245,261) hedef=(245,261) yol=2 adim mermi=40
+[19:28:27.268]   KACIS f2637 [mavi]: (245,261)->(247,261) hedef=(247,261) yol=1 adim mermi=40
+[19:28:27.296]   KACIS f2638 [mavi]: (247,261)->(251,261) hedef=(251,261) yol=2 adim mermi=40
+[19:28:27.331]   KACIS f2639 [mavi]: (251,262)->(253,261) hedef=(253,261) yol=1 adim mermi=39
+[19:28:27.373]   KACIS f2640 [mavi]: (253,261)->(257,261) hedef=(257,261) yol=2 adim mermi=39
+[19:28:27.407]   KACIS f2641 [mavi]: (257,261)->(259,261) hedef=(259,261) yol=1 adim mermi=39
+[19:28:27.434]   KACIS f2642 [mavi]: (259,262)->(263,261) hedef=(263,261) yol=2 adim mermi=39
+[19:28:27.469]   KACIS f2643 [mavi]: (263,261)->(265,261) hedef=(265,261) yol=1 adim mermi=38
+[19:28:27.497]   KACIS f2644 [mavi]: (265,261)->(269,261) hedef=(269,261) yol=2 adim mermi=38
+[19:28:27.545]   KACIS f2645 [mavi]: (269,262)->(271,261) hedef=(271,261) yol=1 adim mermi=38
+[19:28:27.573]   KACIS f2646 [mavi]: (271,261)->(275,261) hedef=(275,261) yol=2 adim mermi=38
+[19:28:27.609]   KACIS f2647 [mavi]: (275,261)->(277,261) hedef=(277,261) yol=1 adim mermi=37
+[19:28:27.636]   KACIS f2648 [mavi]: (277,262)->(281,261) hedef=(281,261) yol=2 adim mermi=36
+[19:28:27.671]   KACIS f2649 [mavi]: (281,261)->(283,259) hedef=(283,259) yol=1 adim mermi=36
+[19:28:27.720]   KACIS f2650 [mavi]: (283,259)->(287,255) hedef=(287,255) yol=2 adim mermi=35
+[19:28:27.747]   KACIS f2651 [mavi]: (287,255)->(289,255) hedef=(289,255) yol=1 adim mermi=35
+[19:28:27.775]   KACIS f2652 [mavi]: (289,255)->(293,255) hedef=(293,255) yol=2 adim mermi=35
+[19:28:27.809]   KACIS f2653 [mavi]: (293,256)->(295,255) hedef=(295,255) yol=1 adim mermi=35
+[19:28:27.845]   KACIS f2654 [mavi]: (295,255)->(299,255) hedef=(299,255) yol=2 adim mermi=34
+[19:28:27.886]   KACIS f2655 [mavi]: (299,255)->(301,255) hedef=(301,255) yol=1 adim mermi=34
+[19:28:27.921]   KACIS f2656 [mavi]: (301,256)->(305,255) hedef=(305,255) yol=2 adim mermi=34
+[19:28:27.949]   KACIS f2657 [mavi]: (305,255)->(311,255) hedef=(319,261) yol=7 adim mermi=34
+[19:28:28.011]   KACIS f2659 [mavi]: (311,256)->(313,261) hedef=(313,261) yol=2 adim mermi=33
+[19:28:28.046]   KACIS f2660 [mavi]: (313,261)->(317,261) hedef=(317,261) yol=2 adim mermi=33
+[19:28:28.087]   KACIS f2661 [mavi]: (317,261)->(319,261) hedef=(319,261) yol=1 adim mermi=33
+[19:28:28.123]   KACIS f2662 [mavi]: (319,262)->(323,261) hedef=(323,261) yol=2 adim mermi=32
+[19:28:28.150]   KACIS f2663 [mavi]: (323,261)->(325,261) hedef=(325,261) yol=1 adim mermi=32
+[19:28:28.185]   KACIS f2664 [mavi]: (325,261)->(329,261) hedef=(329,261) yol=2 adim mermi=32
+[19:28:28.213]   KACIS f2665 [mavi]: (329,262)->(331,261) hedef=(331,261) yol=1 adim mermi=31
+[19:28:28.247]   KACIS f2666 [mavi]: (331,261)->(335,261) hedef=(335,261) yol=2 adim mermi=31
+[19:28:28.289]   KACIS f2667 [mavi]: (335,261)->(337,261) hedef=(337,261) yol=1 adim mermi=31
+[19:28:28.324]   KACIS f2668 [mavi]: (337,262)->(341,261) hedef=(341,261) yol=2 adim mermi=30
+[19:28:28.352]   KACIS f2669 [mavi]: (341,261)->(343,261) hedef=(343,261) yol=1 adim mermi=29
+[19:28:28.386]   KACIS f2670 [mavi]: (343,261)->(347,261) hedef=(347,261) yol=2 adim mermi=29
+[19:28:28.414]   KACIS f2671 [mavi]: (347,262)->(349,261) hedef=(349,261) yol=1 adim mermi=29
+[19:28:28.449]   KACIS f2672 [mavi]: (349,261)->(353,261) hedef=(353,261) yol=2 adim mermi=29
+[19:28:28.490]   KACIS f2673 [mavi]: (353,261)->(355,261) hedef=(355,261) yol=1 adim mermi=28
+[19:28:28.525]   KACIS f2674 [mavi]: (355,262)->(359,261) hedef=(359,261) yol=2 adim mermi=28
+[19:28:28.553]   KACIS f2675 [mavi]: (359,261)->(361,261) hedef=(361,261) yol=1 adim mermi=28
+[19:28:28.588]   KACIS f2676 [mavi]: (361,261)->(365,261) hedef=(365,261) yol=2 adim mermi=28
+[19:28:28.615]   KACIS f2677 [mavi]: (365,262)->(367,261) hedef=(367,261) yol=1 adim mermi=27
+[19:28:28.664]   KACIS f2678 [mavi]: (367,261)->(371,261) hedef=(371,261) yol=2 adim mermi=27
+[19:28:28.692]   KACIS f2679 [mavi]: (371,261)->(373,261) hedef=(373,261) yol=1 adim mermi=27
+[19:28:28.727]   KACIS f2680 [mavi]: (373,262)->(377,261) hedef=(377,261) yol=2 adim mermi=26
+[19:28:28.755]   KACIS f2681 [mavi]: (377,261)->(379,261) hedef=(379,261) yol=1 adim mermi=26
+[19:28:28.789]   KACIS f2682 [mavi]: (379,261)->(383,261) hedef=(383,261) yol=2 adim mermi=26
+[19:28:28.831]   KACIS f2683 [mavi]: (383,262)->(385,261) hedef=(385,261) yol=1 adim mermi=26
+[19:28:28.866]   KACIS f2684 [mavi]: (385,261)->(389,261) hedef=(389,261) yol=2 adim mermi=25
+[19:28:28.893]   KACIS f2685 [mavi]: (389,261)->(391,261) hedef=(391,261) yol=1 adim mermi=25
+[19:28:28.927]   KACIS f2686 [mavi]: (391,262)->(395,261) hedef=(395,261) yol=2 adim mermi=25
+[19:28:28.956]   KACIS f2687 [mavi]: (395,261)->(397,261) hedef=(397,261) yol=1 adim mermi=25
+[19:28:28.990]   KACIS f2688 [mavi]: (397,261)->(401,261) hedef=(401,261) yol=2 adim mermi=24
+[19:28:29.032]   KACIS f2689 [mavi]: (401,262)->(403,261) hedef=(403,261) yol=1 adim mermi=24
+[19:28:29.067]   KACIS f2690 [mavi]: (403,261)->(407,261) hedef=(407,261) yol=2 adim mermi=24
+[19:28:29.094]   KACIS f2691 [mavi]: (407,261)->(409,261) hedef=(409,261) yol=1 adim mermi=24
+[19:28:29.137]   KACIS f2692 [mavi]: (409,262)->(413,261) hedef=(413,261) yol=2 adim mermi=23
+[19:28:29.157]   KACIS f2693 [mavi]: (413,261)->(415,261) hedef=(415,261) yol=1 adim mermi=23
+[19:28:29.205]   KACIS f2694 [mavi]: (415,261)->(419,261) hedef=(419,261) yol=2 adim mermi=23
+[19:28:29.233]   KACIS f2695 [mavi]: (419,262)->(421,261) hedef=(421,261) yol=1 adim mermi=22
+[19:28:29.268]   KACIS f2696 [mavi]: (421,261)->(425,261) hedef=(425,261) yol=2 adim mermi=21
+[19:28:29.295]   KACIS f2697 [mavi]: (425,261)->(427,261) hedef=(427,261) yol=1 adim mermi=21
+[19:28:29.331]   KACIS f2698 [mavi]: (427,262)->(431,261) hedef=(431,261) yol=2 adim mermi=21
+[19:28:29.366]   KACIS f2699 [mavi]: (431,261)->(433,261) hedef=(433,261) yol=1 adim mermi=20
+[19:28:29.407]   KACIS f2700 [mavi]: (433,261)->(437,261) hedef=(437,261) yol=2 adim mermi=20
+[19:28:29.435]   KACIS f2701 [mavi]: (437,262)->(439,261) hedef=(439,261) yol=1 adim mermi=20
+[19:28:29.470]   KACIS f2702 [mavi]: (439,261)->(443,261) hedef=(443,261) yol=2 adim mermi=20
+[19:28:29.497]   KACIS f2703 [mavi]: (443,261)->(445,261) hedef=(445,261) yol=1 adim mermi=19
+[19:28:29.532]   KACIS f2704 [mavi]: (445,262)->(449,261) hedef=(449,261) yol=2 adim mermi=19
+[19:28:29.567]   KACIS f2705 [mavi]: (449,261)->(451,261) hedef=(451,261) yol=1 adim mermi=19
+[19:28:29.608] TUR 6 BITTI: kacis=123, hasar alinan vurus=0 (-0 HP), en fazla mermi=64
