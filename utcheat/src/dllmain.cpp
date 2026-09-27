@@ -58,6 +58,7 @@ struct GameState {
 HWND gWnd = nullptr;
 WNDPROC gOrigWndProc = nullptr;
 bool gImguiReady = false;
+ImFont* gSplashFont = nullptr;
 UINT gBbW = 0, gBbH = 0;
 int gVarX = -1, gVarY = -1, gVarObj = -1;
 
@@ -565,6 +566,11 @@ void initImgui(IDirect3DDevice9* dev) {
     if (GetFileAttributesA(fontPath) == INVALID_FILE_ATTRIBUTES ||
         !io.Fonts->AddFontFromFileTTF(fontPath, 17.0f, nullptr, ranges))
         io.Fonts->AddFontDefault();
+    // Enjeksiyon acilis yazisi icin buyuk kalin font (yoksa varsayilan font buyutulerek cizilir).
+    GetWindowsDirectoryA(fontPath, MAX_PATH);
+    strcat_s(fontPath, "\Fonts\segoeuib.ttf");
+    if (GetFileAttributesA(fontPath) != INVALID_FILE_ATTRIBUTES)
+        gSplashFont = io.Fonts->AddFontFromFileTTF(fontPath, 44.0f, nullptr, ranges);
 
     ImGui::StyleColorsDark();
     ImGuiStyle& s = ImGui::GetStyle();
@@ -577,6 +583,41 @@ void initImgui(IDirect3DDevice9* dev) {
     gOrigWndProc = (WNDPROC)SetWindowLongPtrW(gWnd, GWLP_WNDPROC, (LONG_PTR)hkWndProc);
     vinput::setWindow(gWnd);
     gImguiReady = true;
+}
+
+// ---------------------------------------------------------------- enjeksiyon acilis yazisi
+// Ilk 1 sn laf sokma, ardindan ~2.5 sn GitHub adi. Gercek saatle (hiz hilesinden etkilenmez).
+void drawSplash() {
+    static ULONGLONG start = 0;
+    const ULONGLONG now = oGetTickCount64 ? oGetTickCount64() : GetTickCount64();
+    if (!start) start = now;
+    const float t = (float)(now - start);
+    if (t > 3500) return;
+
+    ImDrawList* dl = ImGui::GetForegroundDrawList();
+    const ImVec2 ds = ImGui::GetIO().DisplaySize;
+    ImFont* font = gSplashFont ? gSplashFont : ImGui::GetFont();
+    auto fade = [&](float from, float to) {  // [from, to] araliginda 150 ms giris / 250 ms cikis
+        if (t < from || t > to) return 0.0f;
+        return std::fmin(1.0f, std::fmin((t - from) / 150.0f, (to - t) / 250.0f));
+    };
+    auto centered = [&](const char* text, float size, float y, ImU32 rgb, float a) {
+        ImVec2 sz = font->CalcTextSizeA(size, FLT_MAX, 0, text);
+        ImVec2 pos((ds.x - sz.x) * 0.5f, y - sz.y * 0.5f);
+        const ImU32 shadow = IM_COL32(0, 0, 0, (int)(220 * a));
+        dl->AddText(font, size, ImVec2(pos.x + 3, pos.y + 3), shadow, text);
+        dl->AddText(font, size, pos, (rgb & 0x00FFFFFF) | ((ImU32)(255 * a) << 24), text);
+    };
+    const float scale = std::fmax(0.6f, ds.y / 480.0f);
+    const float dim = std::fmin(1.0f, std::fmin(t / 150.0f, (3500 - t) / 250.0f));
+    dl->AddRectFilled(ImVec2(0, 0), ds, IM_COL32(0, 0, 0, (int)(170 * dim)));
+
+    if (float a = fade(0, 1000))
+        centered("Ruhsuz adam, Undertale'e bile hile ha?", 30 * scale, ds.y * 0.5f, IM_COL32(255, 60, 60, 0), a);
+    if (float a = fade(1000, 3500)) {
+        centered("kmertkun", 52 * scale, ds.y * 0.46f, IM_COL32(255, 220, 60, 0), a);
+        centered("github.com/kmertkun", 18 * scale, ds.y * 0.46f + 42 * scale, IM_COL32(230, 230, 230, 0), a);
+    }
 }
 
 HRESULT WINAPI hkPresent(IDirect3DDevice9* dev, const RECT* src, const RECT* dst, HWND wnd, const RGNDATA* dirty) {
@@ -607,7 +648,8 @@ HRESULT WINAPI hkPresent(IDirect3DDevice9* dev, const RECT* src, const RECT* dst
             dodge::drawDebug(ImGui::GetBackgroundDrawList(), sc, (gBbW - 640 * sc) * 0.5f, (gBbH - 480 * sc) * 0.5f);
         }
         if (g.menuOpen) drawMenu();
-        else {
+        drawSplash();
+        if (!g.menuOpen) {
             // Menu kapaliyken aktif hileleri kucuk bir etiketle goster.
             char tag[48] = "";
             if (g.god) strcat_s(tag, "GOD ");
