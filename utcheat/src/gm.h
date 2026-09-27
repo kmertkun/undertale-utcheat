@@ -83,8 +83,13 @@ inline bool toDouble(const RValue& v, double& out) {
     }
 }
 
+// Oyun data.win'i yukleyip ilk odayi baslatana kadar global instance yok (0x80894C == nullptr). Bu surede
+// getGlobal/setGlobal dogrudan null'u okuyup cokertir (yukleme ekranindayken enjekte edilince olur).
+inline bool ready() { return *pGlobals != nullptr; }
+
 // Sadece zaten var olan global degiskenleri okur/yazar (yeni degisken yaratmaz).
 inline bool readGlobal(const char* name, double& out, int arrayIndex = ARRAY_NONE) {
+    if (!ready()) return false;
     int slot = findVarSlot(*pGlobals, name);
     if (slot < 0) return false;
     RValue v{}; v.kind = 5;
@@ -93,6 +98,7 @@ inline bool readGlobal(const char* name, double& out, int arrayIndex = ARRAY_NON
 }
 
 inline bool writeGlobal(const char* name, double value, int arrayIndex = ARRAY_NONE) {
+    if (!ready()) return false;
     int slot = findVarSlot(*pGlobals, name);
     if (slot < 0) return false;
     RValue v{}; v.real = value; v.kind = KIND_REAL;

@@ -623,7 +623,7 @@ void drawSplash() {
 HRESULT WINAPI hkPresent(IDirect3DDevice9* dev, const RECT* src, const RECT* dst, HWND wnd, const RGNDATA* dirty) {
     if (!gImguiReady) initImgui(dev);
 
-    tickGame();
+    if (gm::ready()) tickGame();  // yukleme ekraninda oyun degiskenleri henuz yok
     if (std::fabs(g.speed - gAppliedSpeed) > 1e-4) setSpeed(g.speed);
 
     if (gImguiReady) {
