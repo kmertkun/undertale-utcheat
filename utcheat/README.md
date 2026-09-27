@@ -13,6 +13,7 @@ Hazır derlenmiş hali: [Releases](https://github.com/kmertkun/undertale-utcheat
 ## Menü
 | Bölüm | Özellik |
 |---|---|
+| Karakter | Haritada Frisk yerine Chara, Sans, Papyrus, Toriel, Undyne, Alphys, Asgore, Asriel, Monster Kid ya da Napstablook olarak gez. Çarpışma kutusu Frisk'te kalır, sprite ayaklara hizalanır |
 | Can | Ölümsüzlük (HP hep dolu + game over engeli), tek vuruş (varsayılan açık, her vuruş 999999999; Sans dahil), canı doldur, Max HP ayarla |
 | Sonlar | Haritadayken Nötr (Sans'ın telefonu), Gerçek Pasifist (gün batımı → Toriel'in odası) ya da Soykırım (Chara) sonunun son sahnesine ışınlar. Jenerik (teşekkürler) varsayılan olarak atlanır. Önce `%LOCALAPPDATA%\UNDERTALE` → `UNDERTALE_utcheat_yedek` yedeklenir; "Kayıtları geri yükle" ile geri alınır. Soykırımda oyunun kayıtları silip Steam Cloud'a kalıcı işaret yazdığı adım (obj_gameshake) iki ayrı yoldan engellenir |
 | Altın | +100 / +1000, istediğin değere ayarla |

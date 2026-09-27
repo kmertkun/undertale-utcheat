@@ -64,6 +64,10 @@ constexpr int ROOM_UNDERTALE_END = 239;  // notr: Sans'in telefonu + jenerik (ob
 constexpr int ROOM_OUTSIDEWORLD  = 241;  // pasifist: gun batimi -> jenerik -> "THE END"
 constexpr int ROOM_EMPTY         = 321;
 constexpr int ROOM_EMPTYBLACK    = 323;  // obj_black_ender: game_restart
+// Karakter degistirme
+constexpr uintptr_t ADDR_SPRITE_DUPLICATE  = 0x00518090;  // sprite_duplicate(ind) -> yeni sprite
+constexpr uintptr_t ADDR_SPRITE_SET_OFFSET = 0x0051C4C0;  // sprite_set_offset(ind, xoff, yoff)
+constexpr int SPR_MAINCHARAD = 1131;  // Frisk asagi (20x30, orijin 0,0); carpisma maskesi olarak da kullanilir
 // Built-in "room" degiskeninin getter'i (0x401BB0) bu int'i okur.
 inline int currentRoom() { return *(volatile int*)0x00A18EA0; }
 

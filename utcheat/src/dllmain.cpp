@@ -33,6 +33,7 @@ struct Cheats {
     int pendingEnding = 0;  // 1 notr, 2 pasifist, 3 soykirim
     bool pendingRestore = false;
     bool skipCredits = true;
+    int character = 0;  // kCharacters indeksi, 0 = Frisk
 } g;
 
 enum { END_NEUTRAL = 1, END_PACIFIST = 2, END_GENOCIDE = 3 };
@@ -294,6 +295,85 @@ void tickSkipCredits() {
     }
 }
 
+// ---------------------------------------------------------------- karakter degistirme
+// obj_mainchara her adimda sprite_index'i yone gore dsprite/usprite/lsprite/rsprite'tan secer; bunlara baska bir
+// karakterin yurume sprite'lari yazilir. Karakterlerin boyu farkli oldugu icin:
+// - carpisma maskesi Frisk'te kalir (mask_index = spr_maincharad), duvarlara takilmaz;
+// - sprite'lar kopyalanip (sprite_duplicate) kopyanin orijini, alt-ortasi Frisk'in ayaklarina gelecek sekilde
+//   kaydirilir. Orijinaller degismez, dunyadaki NPC'ler normal cizilir.
+struct CharDef {
+    const char* name;
+    int spr[4];  // asagi, yukari, sol, sag
+    int ox[4];   // sprite'in kendi orijin x'i (yonler arasi hizalama)
+    int w, h;    // asagi sprite'inin boyutu
+};
+const CharDef kCharacters[] = {
+    { "Frisk",       { 1131, 1132, 1134, 1133 }, {}, 20, 30 },
+    { "Chara",       { 1108, 1114, 1112, 1110 }, {}, 20, 30 },
+    { "Sans",        { 1443, 1452, 1457, 1453 }, {}, 25, 32 },
+    { "Papyrus",     { 1402, 1414, 1419, 1417 }, {}, 27, 44 },
+    { "Toriel",      { 1191, 1200, 1196, 1195 }, {}, 32, 58 },
+    { "Undyne",      { 1494, 1502, 1504, 1506 }, { 0, 6, 0, 10 }, 26, 54 },
+    { "Alphys",      { 1729, 1742, 1741, 1734 }, {}, 29, 34 },
+    { "Asgore",      { 2003, 2006, 1999, 2000 }, {}, 57, 63 },
+    { "Asriel",      { 2526, 2528, 2533, 2530 }, {}, 16, 28 },
+    { "Monster Kid", { 1482, 1490, 1485, 1487 }, {}, 22, 29 },
+    { "Napstablook", { 1216, 1218, 1213, 1221 }, {}, 17, 33 },
+};
+constexpr int kCharCount = (int)(sizeof kCharacters / sizeof kCharacters[0]);
+int gCharSprites[kCharCount][4];  // hizalanmis kopyalar (0: henuz yok)
+int gCharApplied = 0;
+const char* const kDirVars[4] = { "dsprite", "usprite", "lsprite", "rsprite" };
+
+double callRoutineResult(uintptr_t addr, int argc, gm::RValue* args) {
+    gm::RValue result{};
+    ((gm::Routine)addr)(&result, nullptr, nullptr, argc, args);
+    double v = -1;
+    gm::toDouble(result, v);
+    return v;
+}
+
+// Karakterin 4 sprite'ini bir kez kopyalayip hizalar; kopyalanamazsa orijinali kullanir.
+const int* characterSprites(int ci) {
+    int* out = gCharSprites[ci];
+    if (out[0]) return out;
+    const CharDef& c = kCharacters[ci];
+    for (int i = 0; i < 4; ++i) {
+        gm::RValue a[3]{};
+        a[0].real = c.spr[i];
+        double dup = callRoutineResult(gm::ADDR_SPRITE_DUPLICATE, 1, a);
+        if (dup < 0) { out[i] = c.spr[i]; continue; }
+        a[0].real = dup;
+        a[1].real = c.ox[i] + std::round(c.w / 2.0 - 10);  // yatayda Frisk'in ortasina
+        a[2].real = c.h - 30;                              // ayaklar Frisk'in ayaklarina
+        callRoutineResult(gm::ADDR_SPRITE_SET_OFFSET, 3, a);
+        out[i] = (int)dup;
+    }
+    ulog::write("Karakter sprite'lari hazirlandi: %s (%d %d %d %d)", c.name, out[0], out[1], out[2], out[3]);
+    return out;
+}
+
+void tickCharacter() {
+    void* mc = gm::findInstance(gm::OBJ_MAINCHARA, gVarObj);
+    if (!mc) return;
+    static const int vMask = gm::findBuiltinVar("mask_index");
+    if (g.character == 0) {
+        if (gCharApplied != 0) {  // Frisk'e don (yeni odada oyun zaten Frisk'le yaratir)
+            for (int i = 0; i < 4; ++i) gm::writeInstanceVar(mc, kDirVars[i], kCharacters[0].spr[i]);
+            gm::writeInstance(mc, vMask, -1);
+            gCharApplied = 0;
+        }
+        return;
+    }
+    const int* spr = characterSprites(g.character);
+    for (int i = 0; i < 4; ++i) {
+        double cur = -1;
+        if (gm::readInstanceVar(mc, kDirVars[i], cur) && (int)cur != spr[i]) gm::writeInstanceVar(mc, kDirVars[i], spr[i]);
+    }
+    gm::writeInstance(mc, vMask, gm::SPR_MAINCHARAD);
+    gCharApplied = g.character;
+}
+
 // ---------------------------------------------------------------- oyun durumu (ana thread'de, her kare)
 void tickGame() {
     if (gVarObj < 0) {
@@ -393,6 +473,7 @@ void tickGame() {
     if (g.pendingEnding) { startEnding(g.pendingEnding); g.pendingEnding = 0; }
     tickGenocide();
     tickSkipCredits();
+    tickCharacter();
     if (g.pendingRestore) {
         g.pendingRestore = false;
         if (restoreSaves()) callRoutine(gm::ADDR_GAME_RESTART, 0, nullptr);
@@ -408,6 +489,15 @@ void drawMenu() {
         return;
     }
     ImGui::TextDisabled("INSERT: menüyü aç/kapa");
+    ImGui::SetNextItemWidth(160);
+    if (ImGui::BeginCombo("Karakter", kCharacters[g.character].name)) {
+        for (int i = 0; i < kCharCount; ++i)
+            if (ImGui::Selectable(kCharacters[i].name, i == g.character)) {
+                g.character = i;
+                ulog::write("Karakter: %s", kCharacters[i].name);
+            }
+        ImGui::EndCombo();
+    }
 
     ImGui::SeparatorText("Can");
     if (ImGui::Checkbox("Ölümsüzlük (God Mode)", &g.god)) ulog::write("God mode: %s", g.god ? "ACIK" : "KAPALI");
