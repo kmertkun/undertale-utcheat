@@ -15,6 +15,7 @@
 #include "log.h"
 #include "input.h"
 #include "weapons.h"
+#include "timestop.h"
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND, UINT, WPARAM, LPARAM);
 
@@ -484,6 +485,7 @@ void tickGame() {
 
     dodge::tick(g.dodge, gDodge);
 
+    timestop::tick(gVarObj);
     weapons::tick(gVarObj);
     static bool sSansDeath = false;  // Sans'a silah isabet etti: olum sahnesini baslat
     if (weapons::takeSansKill()) sSansDeath = true;
@@ -660,6 +662,13 @@ void drawMenu() {
     ImGui::EndDisabled();
     if (!st.frisk) ImGui::TextDisabled("Haritada yürürken kullanılabilir");
 
+    ImGui::PushStyleColor(ImGuiCol_Button, timestop::active() ? ImVec4(0.75f, 0.6f, 0.1f, 1) : ImVec4(0.3f, 0.2f, 0.5f, 1));
+    if (ImGui::Button(timestop::active() ? "ZAMANI AKIT (T)" : "ZAMANI DURDUR (T)")) timestop::toggle();
+    ImGui::PopStyleColor();
+    ImGui::SameLine();
+    if (timestop::active()) ImGui::TextDisabled("%.1f sn, sadece sen hareket ediyorsun", timestop::seconds());
+    else ImGui::TextDisabled("her şey donar, sen hareket edersin");
+
     ImGui::SeparatorText("Silah (tıkladığın yere, 1 hasar)");
     ImGui::RadioButton("Kapalı", &g.weapon, weapons::OFF);
     ImGui::SameLine();
@@ -750,6 +759,11 @@ bool clientToPort(HWND hWnd, LPARAM lParam, float& px, float& py) {
 LRESULT CALLBACK hkWndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     if (msg == WM_KEYDOWN && wParam == VK_INSERT && !(lParam & (1 << 30))) {
         g.menuOpen = !g.menuOpen;
+        return 0;
+    }
+    if (msg == WM_KEYDOWN && wParam == 'T' && !(lParam & (1 << 30)) &&
+        !(gImguiReady && g.menuOpen && ImGui::GetIO().WantTextInput)) {
+        timestop::toggle();
         return 0;
     }
     if (msg == WM_LBUTTONDOWN && g.weapon != weapons::OFF &&
@@ -882,6 +896,7 @@ HRESULT WINAPI hkPresent(IDirect3DDevice9* dev, const RECT* src, const RECT* dst
             float sc = std::fmin(gBbW / 640.0f, gBbH / 480.0f);
             dodge::drawDebug(ImGui::GetBackgroundDrawList(), sc, (gBbW - 640 * sc) * 0.5f, (gBbH - 480 * sc) * 0.5f);
         }
+        if (gBbW && gBbH) timestop::drawOverlay(ImGui::GetBackgroundDrawList(), (float)gBbW, (float)gBbH);
         if (g.menuOpen) drawMenu();
         drawSplash();
         if (!g.menuOpen) {
@@ -977,6 +992,7 @@ DWORD WINAPI initThread(LPVOID) {
 
     hook((void*)gm::ADDR_SCRIPT_EXECUTE, (void*)hkScriptExecute, oScriptExecute);
     gInstCreateHooked = hook((void*)gm::ADDR_INSTANCE_CREATE, (void*)hkInstanceCreate, oInstanceCreate);
+    if (!timestop::install()) ulog::write("UYARI: zaman durdurma kancasi kurulamadi");
     gFileHooksOk = hook((void*)gm::ADDR_FILE_DELETE, (void*)hkFileDelete, oFileDelete)
                 && hook((void*)gm::ADDR_STEAM_FILE_WRITE_FILE, (void*)hkSteamFileWriteFile, oSteamFileWriteFile)
                 && hook((void*)gm::ADDR_STEAM_FILE_WRITE, (void*)hkSteamFileWrite, oSteamFileWrite);

@@ -6,6 +6,7 @@
 
 #include "gm.h"
 #include "log.h"
+#include "timestop.h"
 
 namespace weapons {
 namespace {
@@ -275,7 +276,8 @@ void tick(int objectIndexVar) {
     for (size_t n = 0; n < gProj.size();) {
         Proj& p = gProj[n];
         void* inst = gm::instanceById(p.id);
-        bool done = !inst || ++p.life > 600;
+        if (!timestop::active()) ++p.life;  // zaman durunca havada bekler, omru islemez
+        bool done = !inst || p.life > 600;
         if (!done && p.kind == BLASTER && !p.fired) {
             double con = 0;
             if (gm::readInstanceVar(inst, "con", con) && con >= 7) {

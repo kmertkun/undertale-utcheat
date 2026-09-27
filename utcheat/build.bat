@@ -24,7 +24,7 @@ for %%f in (%MH%\src\buffer.c %MH%\src\hook.c %MH%\src\trampoline.c %MH%\src\hde
 echo [2/3] utcheat.dll
 %CXX% -O2 -std=c++17 -shared -static ^
     -I%IMGUI% -I%MH%\include ^
-    src\dllmain.cpp src\autododge.cpp src\input.cpp src\weapons.cpp ^
+    src\dllmain.cpp src\autododge.cpp src\input.cpp src\weapons.cpp src\timestop.cpp ^
     %IMGUI%\imgui.cpp %IMGUI%\imgui_draw.cpp %IMGUI%\imgui_tables.cpp %IMGUI%\imgui_widgets.cpp ^
     %IMGUI%\backends\imgui_impl_dx9.cpp %IMGUI%\backends\imgui_impl_win32.cpp ^
     build\buffer.o build\hook.o build\trampoline.o build\hde32.o ^

@@ -16,6 +16,7 @@ Windows Defender / tarayıcı "bilinmeyen uygulama" uyarısı verebilir: enjekt�
 | | |
 |---|---|
 | **THE ERASURE** | Kırmızı buton: istediğin an Chara gibi dünyayı sil. Vuruş sesi, ekranı dolduran kırmızı 9'lar, pencere sallanır, oyun kapanır. Kayıtların silinmez, Steam Cloud'a bir şey yazılmaz |
+| **Zamanı durdur (T)** | ZA WARUDO: senden başka her şey donar (mermiler, düşmanlar, NPC'ler, attığın mızraklar). Sen hareket etmeye devam edersin. Tekrar T: herkes kaldığı yerden devam eder |
 | **Gaster Blaster / Undyne mızrağı** | Sans'ın Blaster'ını ya da Undyne'ın mızrağını çal: ekranda istediğin yere tıkla, oraya ateş etsin. Değdiği her şey 1 hasar alır: düşmanlar, Sans, savaşta kalp, haritada Frisk |
 | **Karakter** | Haritada Frisk yerine Chara, Sans, Papyrus, Toriel, Undyne, Alphys, Asgore, Asriel, Monster Kid ya da Napstablook olarak gez |
 | **Tek vuruş** | Varsayılan açık. Her vuruş 999999999 hasar, Sans dahil (MISS yok) |

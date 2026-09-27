@@ -13,6 +13,7 @@ Hazır derlenmiş hali: [Releases](https://github.com/kmertkun/undertale-utcheat
 ## Menü
 | Bölüm | Özellik |
 |---|---|
+| Zamanı durdur | **T** ya da mor buton. Motorun olay dağıtıcısı (Perform_Event, 0x41C980) kancalanır: oyuncu (kalp, Frisk, mor ruh, Undyne kalkanı) ve girdi kontrolcüsü dışındaki her nesnenin Step / Alarm / Collision olayları çalışmaz; motor hareketi (speed, gravity, animasyon) sıfırlanır, alarm sayaçları yerinde tutulur. Zaman akınca hepsi geri yüklenir. Hareketini Draw'da yapan Gaster Blaster şarj olunca donar ve son haliyle çizilir |
 | Silah | Sans'ın Gaster Blaster'ı ya da Undyne'ın mızrağı: oyun ekranına sol tıkla, tıkladığın yere ateş eder. Değdiği her şey 1 hasar alır: düşmanlar (oyunun kendi hasar yazısıyla; son can gidince düşman gerçekten ölür), Sans (ölüm sahnesi senin turunda başlar), savaşta kalp, haritada Frisk. Oyunun kendi Blaster'ı kullanılır, kendi kalp çarpışması kapatılır; auto-dodge bunlardan kaçmaz |
 | THE ERASURE | Kırmızı buton: istediğin an Chara'nın dünyayı silmesi (vuruş sesi, ekranı dolduran 9'lar, pencere sallanıp oyun kapanır). Oyunun o anda yaptığı kayıt silme, ruhsuz işareti ve Steam Cloud yazımı etkisizleştirilir; kayıtlar yerinde kalır |
 | Karakter | Haritada Frisk yerine Chara, Sans, Papyrus, Toriel, Undyne, Alphys, Asgore, Asriel, Monster Kid ya da Napstablook olarak gez. Çarpışma kutusu Frisk'te kalır, sprite ayaklara hizalanır |
