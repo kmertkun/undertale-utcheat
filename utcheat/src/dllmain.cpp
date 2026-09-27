@@ -32,6 +32,7 @@ struct Cheats {
     int pendingBattle = 0;  // ana thread'de baslatilacak battlegroup
     int pendingEnding = 0;  // 1 notr, 2 pasifist, 3 soykirim
     bool pendingRestore = false;
+    bool pendingErasure = false;
     bool skipCredits = true;
     int character = 0;  // kCharacters indeksi, 0 = Frisk
 } g;
@@ -125,14 +126,56 @@ void __cdecl hkScriptExecute(gm::RValue* result, void* self, void* other, int ar
     oScriptExecute(result, self, other, argc, args);
 }
 
-// Ikinci emniyet: menuden soykirim sonu baslatildiysa obj_gameshake hic yaratilamaz (tickGenocide'in con kontrolu
-// kacirilsa bile kayitlar silinmez, Steam Cloud'a yazilmaz).
-gm::Routine oInstanceCreate;
-bool gGenoGuard = false, gInstCreateHooked = false;
+// Soykirim sonunun "oyun coker" sahnesi (obj_gameshake): pencereyi sallar ve game_end() ile oyunu kapatir. Ayni
+// sahne Create'inde tum kayitlari (ve undertale.exe'yi) file_delete ile siler, "system_information_962" (kalici
+// ruhsuz isareti) yazar ve onu steam_file_write_file ile Steam Cloud'a yollar.
+// Menuden baslatilan soykirimda sahne oldugu gibi oynar, sadece yikici kisimlar etkisizlesir:
+// - file_delete / steam_file_write* hicbir sey yapmaz,
+// - yerel 962 dosyasi (onceden yoksa) olustugu kare silinir; oyun kapanirken bir kez daha kontrol edilir.
+// Bu kancalar kurulamazsa eski yola donulur: obj_gameshake hic yaratilmaz, sahne ondan once kesilir.
+gm::Routine oInstanceCreate, oFileDelete, oSteamFileWriteFile, oSteamFileWrite;
+bool gGenoGuard = false, gInstCreateHooked = false, gFileHooksOk = false;
+bool g962Before = true;  // soykirim baslarken 962 zaten var miydi (varsa dokunma)
+
+void __cdecl hkFileDelete(gm::RValue* result, void* self, void* other, int argc, gm::RValue* args) {
+    if (gGenoGuard) {
+        ulog::write("SON: file_delete engellendi (kayitlar yerinde kaliyor)");
+        result->real = 0; result->kind = gm::KIND_REAL;
+        return;
+    }
+    oFileDelete(result, self, other, argc, args);
+}
+void __cdecl hkSteamFileWriteFile(gm::RValue* result, void* self, void* other, int argc, gm::RValue* args) {
+    if (gGenoGuard) {
+        ulog::write("SON: steam_file_write_file engellendi (Steam Cloud'a bir sey yazilmadi)");
+        result->real = 0; result->kind = gm::KIND_REAL;
+        return;
+    }
+    oSteamFileWriteFile(result, self, other, argc, args);
+}
+void __cdecl hkSteamFileWrite(gm::RValue* result, void* self, void* other, int argc, gm::RValue* args) {
+    if (gGenoGuard) {
+        ulog::write("SON: steam_file_write engellendi");
+        result->real = 0; result->kind = gm::KIND_REAL;
+        return;
+    }
+    oSteamFileWrite(result, self, other, argc, args);
+}
+
+std::wstring saveDir();
+std::wstring file962() { std::wstring d = saveDir(); return d.empty() ? d : d + L"\\system_information_962"; }
+
+// Soykirim sirasinda olusan yerel 962 dosyasini sil (baslangicta yoksa).
+void remove962() {
+    if (!gGenoGuard || g962Before) return;
+    std::wstring f = file962();
+    if (!f.empty() && GetFileAttributesW(f.c_str()) != INVALID_FILE_ATTRIBUTES && DeleteFileW(f.c_str()))
+        ulog::write("SON: system_information_962 silindi (ruhsuz isareti kalmadi)");
+}
 
 void __cdecl hkInstanceCreate(gm::RValue* result, void* self, void* other, int argc, gm::RValue* args) {
     double obj;
-    if (gGenoGuard && argc >= 3 && gm::toDouble(args[2], obj) && (int)obj == gm::OBJ_GAMESHAKE) {
+    if (gGenoGuard && !gFileHooksOk && argc >= 3 && gm::toDouble(args[2], obj) && (int)obj == gm::OBJ_GAMESHAKE) {
         ulog::write("SON: obj_gameshake engellendi (kayit silme / Steam Cloud yazimi yok)");
         result->real = -4; result->kind = gm::KIND_REAL;
         return;
@@ -228,20 +271,37 @@ void startEnding(int which) {
     switch (which) {
     case END_NEUTRAL:  roomGoto(gm::ROOM_UNDERTALE_END); break;
     case END_PACIFIST: roomGoto(gm::ROOM_OUTSIDEWORLD); break;
-    case END_GENOCIDE: gGenoGuard = true; roomGoto(gm::ROOM_EMPTY); gGenoStage = 1; break;
+    case END_GENOCIDE: {
+        std::wstring f = file962();
+        g962Before = f.empty() || GetFileAttributesW(f.c_str()) != INVALID_FILE_ATTRIBUTES;
+        gGenoGuard = true;
+        roomGoto(gm::ROOM_EMPTYBLACK);
+        gGenoStage = 1;
+        break;
+    }
     }
     gEndingActive = which;
     ulog::write("SON: %s sonunun son sahnesine isinlaniyor (oda %d)", kEndingNames[which], from);
 }
 
-// Soykirim: bos odada obj_truechara'yi (oyunda obj_floweygonk'un yarattigi Chara sahnesi) yarat. Sahnenin sonunda
-// oyun obj_gameshake ile TUM kayitlari siler, exe'yi silmeye calisir ve "system_information_962"yi Steam Cloud'a
-// yazar (kalici ruhsuz isareti). Yerel yedek bunu geri alamaz; bu yuzden vurus animasyonu bitince (con 62, 40 kare
-// bekleme) sahne kesilir ve oyun o adim calismadan yeniden baslatilir.
+// Soykirim: bos odada obj_truechara'yi (oyunda obj_floweygonk'un yarattigi Chara sahnesi) yarat. Sahnenin sonu
+// (obj_gameshake) yukaridaki kancalarla zararsiz oynar. Kancalar kurulamadiysa vurus animasyonu bitince (con 62,
+// 40 kare bekleme) sahne kesilir ve oyun o adim calismadan yeniden baslatilir.
+// Sahne 640x480 icin yazilmis (oyunda room_battle'da oynar); room_empty 320x240 oldugu icin Chara sag alta, yazilar
+// ekran disina dusuyordu. Bu yuzden 640x480 siyah room_emptyblack kullanilir: oradaki obj_black_ender'in yeniden
+// baslatma sayaci durdurulur ve Chara'nin arkasina alinir (siyah arka plan olarak kalir).
+void holdBlackEnder(bool hold) {
+    if (void* be = gm::findInstance(gm::OBJ_BLACK_ENDER, gVarObj)) {
+        gm::writeInstanceVar(be, "delay", hold ? 1e9 : 3);
+        gm::writeInstance(be, gm::findBuiltinVar("depth"), 100000);
+    }
+}
+
 void tickGenocide() {
-    if (gGenoStage == 1 && gm::currentRoom() == gm::ROOM_EMPTY) {
-        if (void* mc = gm::findInstance(gm::OBJ_MAINCHARA, gVarObj))
-            gm::writeInstance(mc, gm::findBuiltinVar("visible"), 0);
+    remove962();
+    if (gGenoStage == 2) holdBlackEnder(true);
+    if (gGenoStage == 1 && gm::currentRoom() == gm::ROOM_EMPTYBLACK) {
+        holdBlackEnder(true);
         gm::writeGlobal("interact", 1);
         gm::RValue args[3]{};
         args[2].real = gm::OBJ_TRUECHARA;
@@ -252,15 +312,36 @@ void tickGenocide() {
         void* ch = gm::findInstance(gm::OBJ_TRUECHARA, gVarObj);
         double con = 0;
         if (!ch) { gGenoStage = 0; return; }
-        if (gm::readInstanceVar(ch, "con", con) && con >= 62) {
+        if (!gFileHooksOk && gm::readInstanceVar(ch, "con", con) && con >= 62) {
             gm::writeInstanceVar(ch, "con", 900);
             gm::writeInstance(ch, gm::findBuiltinVar("alarm"), -1, 4);
             if (gWnd) SetWindowTextW(gWnd, L"UNDERTALE");
-            roomGoto(gm::ROOM_EMPTYBLACK);
+            holdBlackEnder(false);  // obj_black_ender 3 kare sonra oyunu yeniden baslatir
             ulog::write("SON: Chara sahnesi bitti; kayit silme / Steam Cloud adimi engellendi, oyun yeniden basliyor");
             gGenoStage = 0;
         }
     }
+}
+
+// The Erasure: Chara'nin dunyayi silmesi, istenen an. Oyunda con 63'te olan birebir yapilir (vurus sesi +
+// obj_gameshake): ekran kirmizi 9'larla dolar, pencere sallanir, oyun kapanir. Yukaridaki kancalar sayesinde
+// kayitlar silinmez, ruhsuz isareti kalmaz, Steam Cloud'a yazilmaz.
+bool gErasureFired = false;  // tek sefer: pencere sallanirken buton tekrar tetiklenmesin
+
+void doErasure() {
+    if (gErasureFired || !gFileHooksOk || !backupSaves()) return;
+    gErasureFired = true;
+    g.menuOpen = false;  // efekt tam ekran gorunsun
+    std::wstring f = file962();
+    g962Before = f.empty() || GetFileAttributesW(f.c_str()) != INVALID_FILE_ATTRIBUTES;
+    gGenoGuard = true;
+    gm::RValue a[3]{};
+    a[0].real = gm::SND_DAMAGE; a[1].real = 80; a[2].real = 0;
+    callRoutine(gm::ADDR_AUDIO_PLAY_SOUND, 3, a);
+    gm::RValue c[3]{};
+    c[2].real = gm::OBJ_GAMESHAKE;
+    callRoutine(gm::ADDR_INSTANCE_CREATE, 3, c);
+    ulog::write("THE ERASURE: dunya siliniyor (oda %d)", gm::currentRoom());
 }
 
 // Jenerik (tesekkurler) atlama.
@@ -471,6 +552,7 @@ void tickGame() {
     }
 
     if (g.pendingEnding) { startEnding(g.pendingEnding); g.pendingEnding = 0; }
+    if (g.pendingErasure) { g.pendingErasure = false; doErasure(); }
     tickGenocide();
     tickSkipCredits();
     tickCharacter();
@@ -555,6 +637,15 @@ void drawMenu() {
     ImGui::EndDisabled();
     if (!st.frisk) ImGui::TextDisabled("Haritada yürürken kullanılabilir");
 
+    ImGui::BeginDisabled(!gFileHooksOk || !st.hasHp || gErasureFired);
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.55f, 0.05f, 0.05f, 1));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.8f, 0.1f, 0.1f, 1));
+    if (ImGui::Button("THE ERASURE")) g.pendingErasure = true;
+    ImGui::PopStyleColor(2);
+    ImGui::EndDisabled();
+    ImGui::SameLine();
+    ImGui::TextDisabled("dünyayı sil, oyun kapanır (kayıtlar güvende)");
+
     if (ImGui::CollapsingHeader("Sonlar")) {
         ImGui::TextDisabled("Seçilen sonun son sahnesine ışınlar.\nÖnce kayıtlar otomatik yedeklenir.");
         ImGui::BeginDisabled(!st.frisk || st.soul || gGenoStage != 0);
@@ -565,7 +656,10 @@ void drawMenu() {
         ImGui::EndDisabled();
         ImGui::EndDisabled();
         ImGui::Checkbox("Jeneriği (teşekkürler) atla", &g.skipCredits);
-        ImGui::TextDisabled("Soykırım: kayıt silme ve Steam Cloud adımı\nengellenir, sahne bitince oyun yeniden başlar.");
+        if (gFileHooksOk)
+            ImGui::TextDisabled("Soykırım: sonunda oyun sallanıp kapanır (orijinal sahne).\nKayıt silme ve Steam Cloud işareti engellenir.");
+        else
+            ImGui::TextDisabled("Soykırım: kayıt silme ve Steam Cloud adımı\nengellenir, sahne bitince oyun yeniden başlar.");
         if (!st.frisk) ImGui::TextDisabled("Haritada yürürken kullanılabilir");
         if (dirExists(backupDir())) {
             ImGui::TextColored(ImVec4(1, 0.8f, 0.3f, 1), "Son öncesi kayıt yedeği duruyor");
@@ -832,6 +926,10 @@ DWORD WINAPI initThread(LPVOID) {
 
     hook((void*)gm::ADDR_SCRIPT_EXECUTE, (void*)hkScriptExecute, oScriptExecute);
     gInstCreateHooked = hook((void*)gm::ADDR_INSTANCE_CREATE, (void*)hkInstanceCreate, oInstanceCreate);
+    gFileHooksOk = hook((void*)gm::ADDR_FILE_DELETE, (void*)hkFileDelete, oFileDelete)
+                && hook((void*)gm::ADDR_STEAM_FILE_WRITE_FILE, (void*)hkSteamFileWriteFile, oSteamFileWriteFile)
+                && hook((void*)gm::ADDR_STEAM_FILE_WRITE, (void*)hkSteamFileWrite, oSteamFileWrite);
+    if (!gFileHooksOk) ulog::write("UYARI: dosya kancalari kurulamadi; soykirim sonu oyun kapanmadan kesilecek");
     if (!gInstCreateHooked)
         ulog::write("UYARI: instance_create kancasi kurulamadi (soykirim sonu kapali)");
     if (!vinput::installHooks()) ulog::write("UYARI: klavye kancalari kurulamadi (mavi ruh auto-dodge calismaz)");
@@ -854,6 +952,8 @@ BOOL WINAPI DllMain(HINSTANCE inst, DWORD reason, LPVOID) {
         DisableThreadLibraryCalls(inst);
         ulog::open(inst);
         if (HANDLE t = CreateThread(nullptr, 0, initThread, nullptr, 0, nullptr)) CloseHandle(t);
+    } else if (reason == DLL_PROCESS_DETACH) {
+        remove962();  // soykirim sonunda game_end: Steam senkronundan once son kontrol
     }
     return TRUE;
 }

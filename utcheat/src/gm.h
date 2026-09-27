@@ -55,6 +55,11 @@ constexpr int OBJ_DMGWRITER  = 190;  // vurus sayisini yazan obje (dmg)
 constexpr uintptr_t ADDR_ROOM_GOTO    = 0x004F3140;  // room_goto(room)
 constexpr uintptr_t ADDR_GAME_RESTART = 0x004F32A0;  // game_restart()
 constexpr int OBJ_TRUECHARA = 497;
+constexpr uintptr_t ADDR_FILE_DELETE           = 0x004EDB90;  // file_delete(name)
+constexpr uintptr_t ADDR_STEAM_FILE_WRITE_FILE = 0x005212B0;  // steam_file_write_file(steamname, localname)
+constexpr uintptr_t ADDR_STEAM_FILE_WRITE      = 0x00521240;  // steam_file_write(name, data, size)
+constexpr uintptr_t ADDR_AUDIO_PLAY_SOUND = 0x0051EB10;  // audio_play_sound(snd, priority, loop)
+constexpr int SND_DAMAGE = 51;  // Chara'nin vurusu (obj_gameshake'ten hemen once calar)
 constexpr int OBJ_GAMESHAKE = 496;  // soykirim sonu: kayitlari siler, Steam Cloud'a 962 yazar
 constexpr int OBJ_CREDITS_SHORT = 138;       // notr jenerik; bitince alarm[6] -> telefon (obj_mainend)
 constexpr int OBJ_OUTSIDEWORLD_EVENT = 1310; // pasifist gun batimi; do_room_goto -> room_end_castroll
@@ -63,7 +68,8 @@ constexpr int ROOM_END_MYROOM = 285, ROOM_END_THEEND = 286;
 constexpr int ROOM_UNDERTALE_END = 239;  // notr: Sans'in telefonu + jenerik (obj_credits_short)
 constexpr int ROOM_OUTSIDEWORLD  = 241;  // pasifist: gun batimi -> jenerik -> "THE END"
 constexpr int ROOM_EMPTY         = 321;
-constexpr int ROOM_EMPTYBLACK    = 323;  // obj_black_ender: game_restart
+constexpr int ROOM_EMPTYBLACK    = 323;  // 640x480 siyah; obj_black_ender: 3 kare sonra game_restart
+constexpr int OBJ_BLACK_ENDER    = 522;  // delay (kare sayaci), depth -40000 (her seyin ustunde siyah)
 // Karakter degistirme
 constexpr uintptr_t ADDR_SPRITE_DUPLICATE  = 0x00518090;  // sprite_duplicate(ind) -> yeni sprite
 constexpr uintptr_t ADDR_SPRITE_SET_OFFSET = 0x0051C4C0;  // sprite_set_offset(ind, xoff, yoff)
